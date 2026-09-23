@@ -3,24 +3,24 @@
    ══════════════════════════════════════════════════════════════════ */
 
 const products = [
-  { id:'business-cards', title:'Business Cards (Visiting Cards)', category:'corporate', tag:'⭐ Bestseller', desc:'Art, Matte, Velvet Soft Touch, Gold Foil Stamping, Spot UV & Metallic cards.', img:'assets/images/business-cards.jpg' },
-  { id:'letterheads', title:'Letterheads & Envelopes', category:'corporate', tag:'Corporate', desc:'Executive letterheads & branded envelopes on 100 GSM sunshine paper stock.', img:'assets/images/letterheads.jpg' },
-  { id:'brochures', title:'Brochures & Catalogs', category:'marketing', tag:'🔥 Popular', desc:'Bi-fold, tri-fold & multi-page brochures with vibrant CMYK color fidelity.', img:'assets/images/brochures.jpg' },
-  { id:'flyers', title:'Flyers & Pamphlets', category:'marketing', tag:'⚡ 24h Express', desc:'Promotional flyers, leaflets & handbills for corporate events & marketing.', img:'assets/images/flyers.jpg' },
-  { id:'invitations', title:'Invitations & Greeting Cards', category:'events', tag:'Specialty', desc:'Wedding cards, event invitations & greeting cards with foil embossing.', img:'assets/images/invitations.jpg' },
-  { id:'stickers', title:'Custom Stickers & Labels', category:'events', tag:'Waterproof', desc:'Art paper, Glossy, Synthetic, Waterproof Vinyl & Die-Cut product labels.', img:'assets/images/stickers.jpg' },
-  { id:'id-cards', title:'ID Cards & Lanyards', category:'corporate', tag:'High Security', desc:'PVC employee ID cards, student badges & custom printed satin lanyards.', img:'assets/images/id-cards.jpg' },
-  { id:'offset-printing', title:'Offset & Flex Signage', category:'custom', tag:'Bulk Master', desc:'Large-format flex banners, star flex, standees & offset commercial printing.', img:'assets/images/offset-printing.jpg' },
-  { id:'binding', title:'Book & Thesis Binding', category:'custom', tag:'Professional', desc:'Spiral, wire-o, softcover & hardcover thesis book binding with golden foil text.', img:'assets/images/binding.jpg' }
+  { id:'business-cards', title:'Business Cards (Visiting Cards)', category:'corporate', tag:'⭐ Bestseller', desc:'Art, Matte, Velvet Soft Touch, Gold Foil Stamping, Spot UV & Metallic cards.', img:'business-cards.jpg' },
+  { id:'letterheads', title:'Letterheads & Envelopes', category:'corporate', tag:'Corporate', desc:'Executive letterheads & branded envelopes on 100 GSM sunshine paper stock.', img:'letterheads.jpg' },
+  { id:'brochures', title:'Brochures & Catalogs', category:'marketing', tag:'🔥 Popular', desc:'Bi-fold, tri-fold & multi-page brochures with vibrant CMYK color fidelity.', img:'brochures.jpg' },
+  { id:'flyers', title:'Flyers & Pamphlets', category:'marketing', tag:'⚡ 24h Express', desc:'Promotional flyers, leaflets & handbills for corporate events & marketing.', img:'flyers.jpg' },
+  { id:'invitations', title:'Invitations & Greeting Cards', category:'events', tag:'Specialty', desc:'Wedding cards, event invitations & greeting cards with foil embossing.', img:'invitations.jpg' },
+  { id:'stickers', title:'Custom Stickers & Labels', category:'events', tag:'Waterproof', desc:'Art paper, Glossy, Synthetic, Waterproof Vinyl & Die-Cut product labels.', img:'stickers.jpg' },
+  { id:'id-cards', title:'ID Cards & Lanyards', category:'corporate', tag:'High Security', desc:'PVC employee ID cards, student badges & custom printed satin lanyards.', img:'id-cards.jpg' },
+  { id:'offset-printing', title:'Offset & Flex Signage', category:'custom', tag:'Bulk Master', desc:'Large-format flex banners, star flex, standees & offset commercial printing.', img:'offset-printing.jpg' },
+  { id:'binding', title:'Book & Thesis Binding', category:'custom', tag:'Professional', desc:'Spiral, wire-o, softcover & hardcover thesis book binding with golden foil text.', img:'binding.jpg' }
 ];
 
 const popularCategories = [
-  { title:'Visiting Cards', desc:'Art, Matte, Velvet, Spot UV & Metallic Foil', count:'12+ Options', img:'assets/images/business-cards.jpg', filter:'corporate' },
-  { title:'Stickers & Labels', desc:'Waterproof Vinyl, Synthetic & Die-Cut', count:'10+ Options', img:'assets/images/stickers.jpg', filter:'events' },
-  { title:'Brochures & Flyers', desc:'Bi-fold, Tri-fold & Promotional Leaflets', count:'8+ Options', img:'assets/images/brochures.jpg', filter:'marketing' },
-  { title:'Flex & Signage', desc:'Star Flex, Standees & Foam Board', count:'6+ Options', img:'assets/images/offset-printing.jpg', filter:'custom' },
-  { title:'ID Cards & Lanyards', desc:'PVC Cards & Custom Satin Lanyards', count:'5+ Options', img:'assets/images/id-cards.jpg', filter:'corporate' },
-  { title:'Thesis Book Binding', desc:'Hardcover, Softcover & Golden Foil Text', count:'7+ Options', img:'assets/images/binding.jpg', filter:'custom' }
+  { title:'Visiting Cards', desc:'Art, Matte, Velvet, Spot UV & Metallic Foil', count:'12+ Options', img:'business-cards.jpg', filter:'corporate' },
+  { title:'Stickers & Labels', desc:'Waterproof Vinyl, Synthetic & Die-Cut', count:'10+ Options', img:'stickers.jpg', filter:'events' },
+  { title:'Brochures & Flyers', desc:'Bi-fold, Tri-fold & Promotional Leaflets', count:'8+ Options', img:'brochures.jpg', filter:'marketing' },
+  { title:'Flex & Signage', desc:'Star Flex, Standees & Foam Board', count:'6+ Options', img:'offset-printing.jpg', filter:'custom' },
+  { title:'ID Cards & Lanyards', desc:'PVC Cards & Custom Satin Lanyards', count:'5+ Options', img:'id-cards.jpg', filter:'corporate' },
+  { title:'Thesis Book Binding', desc:'Hardcover, Softcover & Golden Foil Text', count:'7+ Options', img:'binding.jpg', filter:'custom' }
 ];
 
 const typingKeywords = [
