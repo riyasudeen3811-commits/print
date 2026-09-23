@@ -1604,3 +1604,201 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2 !important;
   pointer-events: none !important;
 }
+
+
+/* ══════════════════════════════════════════════════════════════════
+   ADHA PRINTS — Ultra-Responsive Mobile & Tablet CSS Suite
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Global Overflow Protection */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Mobile Navigation Drawer Styling */
+.mobile-menu {
+  position: fixed !important;
+  top: 0 !important;
+  right: -100% !important;
+  width: 82% !important;
+  max-width: 320px !important;
+  height: 100vh !important;
+  background: #0f172a !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+  z-index: 2000 !important;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 80px 24px 32px !important;
+  gap: 16px !important;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.mobile-menu.active {
+  right: 0 !important;
+}
+
+.mobile-menu a {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  color: #f8fafc !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  text-decoration: none !important;
+}
+
+/* Tablet & Mobile Screens (<= 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .grid-2, .grid-3, .grid-4, .banners-grid, .about-grid, .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .banner-large, .banner-tall, .banner-wide {
+    grid-column: span 2 !important;
+  }
+}
+
+/* Smartphone Screens (<= 768px) */
+@media (max-width: 768px) {
+  /* Top Announcement Bar */
+  .top-bar-content, .top-announcement-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 6px !important;
+    padding: 6px 12px !important;
+  }
+  .top-bar-right, .top-announcement-right {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Header Layout */
+  .header-main, .header-container {
+    padding: 10px 16px !important;
+    gap: 12px !important;
+    justify-content: space-between !important;
+  }
+  .header-search-container, .header-search {
+    order: 3 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 4px !important;
+  }
+  .sub-nav {
+    display: none !important; /* Managed via mobile drawer */
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* Hero Wording & Layout on Mobile */
+  .hero, .hero-section {
+    min-height: 520px !important;
+    padding-top: 40px !important;
+  }
+  .hero-animated-wording-container {
+    padding: 30px 16px 20px !important;
+    min-height: 420px !important;
+    justify-content: flex-end !important;
+  }
+  .hero-brand-group {
+    max-width: 100% !important;
+  }
+  .animated-word {
+    font-size: clamp(1.75rem, 6.8vw, 2.6rem) !important;
+  }
+  .hero-animated-sub {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+  .hero-handwritten-tag {
+    font-size: 1.6rem !important;
+    align-self: flex-start !important;
+  }
+  .hero-bottom-cta {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin-top: 15px !important;
+  }
+  .hero-cta-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 20px !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Running Marquee */
+  .hero-services-marquee {
+    padding: 10px 0 !important;
+  }
+  .marquee-item {
+    padding: 6px 14px !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* Grids to Single Column */
+  .grid-2, .grid-3, .grid-4, .banners-grid, .about-grid, .footer-grid, .products-grid, .process-steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .banner-large, .banner-tall, .banner-wide {
+    grid-column: span 1 !important;
+  }
+
+  /* Modal Windows on Mobile */
+  .modal-dialog, .modal-container, .calculator-modal-content {
+    width: 94% !important;
+    max-width: 94% !important;
+    margin: 20px auto !important;
+    padding: 20px 16px !important;
+    border-radius: 16px !important;
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* Image Heights on Mobile */
+  .card-img, .banner-card {
+    min-height: 200px !important;
+  }
+
+  /* Comparison Slider */
+  .comparison-container {
+    height: 240px !important;
+  }
+}
+
+/* Extra Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1.25rem !important;
+  }
+  .brand-sub, .brand-tagline {
+    font-size: 0.7rem !important;
+  }
+  .animated-word {
+    font-size: 1.6rem !important;
+  }
+  .section-header h2 {
+    font-size: 1.5rem !important;
+  }
+  .btn {
+    padding: 11px 20px !important;
+    font-size: 0.9rem !important;
+  }
+}
