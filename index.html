@@ -34,11 +34,11 @@
     <!-- Performance & Preload Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="hero-home.jpg?v=9" as="image" fetchpriority="high">
+    <link rel="preload" href="hero-showcase-4k.jpg?v=4k" as="image" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="premium-animations.css">
+    <link rel="stylesheet" href="styles.css?v=20260928_v2">
+    <link rel="stylesheet" href="premium-animations.css?v=20260928_v2">
     
     <!-- JSON-LD LocalBusiness Schema -->
     <script type="application/ld+json">
@@ -78,17 +78,7 @@
   <body>
     <div class="scroll-progress-bar" id="scroll-progress"></div>
 
-    <!-- ═══ TOP ANNOUNCEMENT BAR ═══ -->
-    <div class="top-announcement-bar">
-      <div class="container top-announcement-inner">
-        <span class="announcement-text">🎉 Use code <strong class="highlight-code">PRINT10</strong> on first order | Doorstep Delivery across Chennai</span>
-        <div class="top-announcement-right">
-          <a href="tel:+919790779720" class="top-link">📞 +91 97907 79720</a>
-          <span class="sep">|</span>
-          <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20need%20a%20quotation." class="top-link whatsapp-top" target="_blank">💬 WhatsApp Support</a>
-        </div>
-      </div>
-    </div>
+
 
     <!-- ═══ MAIN HEADER ═══ -->
     <header class="site-header" id="navbar">
@@ -121,10 +111,6 @@
 
         <!-- Header Right Actions -->
         <div class="header-actions">
-          <button class="account-btn" id="account-modal-trigger">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span class="account-label">Sign In</span>
-          </button>
           
           <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20want%20to%20get%20an%20instant%20quote." class="btn btn-whatsapp header-wa-btn" target="_blank">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -146,7 +132,7 @@
             <li class="nav-item"><a href="#stickers" class="nav-link">Stickers & Labels</a></li>
             <li class="nav-item"><a href="#signage" class="nav-link">Signage & Apparel</a></li>
             <li class="nav-item"><a href="#binding" class="nav-link">ID & Thesis Binding</a></li>
-            <li class="nav-item nav-item-highlight"><a href="#calculator" class="nav-link">⚡ Instant Quote Calculator</a></li>
+
           </ul>
         </div>
       </nav>
@@ -160,39 +146,14 @@
       <a href="#stickers">Stickers & Labels</a>
       <a href="#signage">Signage & Apparel</a>
       <a href="#binding">ID & Thesis Binding</a>
-      <a href="#calculator">Instant Calculator</a>
+
       <a href="#contact">Contact Us</a>
-      <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20need%20a%20quotation." class="btn btn-primary" target="_blank">Get Instant Quote</a>
     </div>
 
-    <!-- ═══ HERO SECTION — NEW HERO IMAGE & OPTIMIZED SPEED ═══ -->
-    <section class="hero" id="home">
-      <div class="hero-bg">
-        <img src="hero-home.jpg?v=9" alt="Adha Prints — Product Showcase" fetchpriority="high" decoding="async" width="1024" height="575" />
-      </div>
-      <div class="hero-overlay"></div>
-      
-      <!-- Animated Wording Overlay -->
-      <div class="hero-animated-wording-container">
-        <div class="hero-handwritten-tag">Your One Stop Printing Partner</div>
-        
-        <div class="hero-brand-group">
-          <h1 class="hero-title-main">
-            <span class="animated-word word-1">PRINT YOUR BRAND.</span>
-            <span class="animated-word word-2 gradient-shimmer-text">MAKE IT REMEMBERED.</span>
-          </h1>
-          <p class="hero-animated-sub">High-quality printing solutions for businesses, events, education and everyday needs.</p>
-        </div>
-
-        <div class="hero-bottom-cta">
-          <a href="#cards" class="btn btn-primary hero-cta-btn">
-            Explore Printing Services <span class="arrow">→</span>
-          </a>
-          <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20need%20a%20quotation%20for%20my%20business." class="btn btn-whatsapp hero-cta-btn" target="_blank">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Instant Quote
-          </a>
-        </div>
+    <!-- ═══ HERO SECTION — UPLOADED IMAGE BELOW NAVIGATION ═══ -->
+    <section class="hero-image-only" id="home" style="width: 100% !important; max-width: 100% !important; min-height: calc(100vh - 120px) !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; background: #0b0f19 !important; display: flex !important; align-items: center !important; justify-content: center !important;">
+      <div class="hero-image-container" style="width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;">
+        <img src="hero-showcase-4k.jpg?v=4k" alt="Adha Prints — Complete Printing Showcase" class="hero-full-banner-img" style="width: 100% !important; height: 100% !important; min-height: calc(100vh - 120px) !important; max-width: 100% !important; object-fit: cover !important; object-position: center !important; display: block !important;" fetchpriority="high" decoding="async" />
       </div>
     </section>
 
@@ -415,64 +376,7 @@
       </div>
     </section>
 
-    <!-- ═══ INSTANT QUOTE CALCULATOR ═══ -->
-    <section class="calculator-section section-padding" id="calculator">
-      <div class="container">
-        <div class="calculator-card reveal">
-          <div class="calc-header text-center">
-            <div class="accent-line"></div>
-            <h2 class="section-title">Instant Specifications & Quote Helper</h2>
-            <p class="section-subtitle">Customize paper GSM, lamination, and size — then send specs straight to WhatsApp for instant order confirmation.</p>
-          </div>
 
-          <div class="calc-grid">
-            <div class="calc-group">
-              <label class="calc-label" for="calc-product">Select Product Type</label>
-              <select class="calc-select" id="calc-product">
-                <option value="Business Cards">Visiting Cards (350 GSM Art / Velvet / Spot UV)</option>
-                <option value="Brochures">Brochures & Catalogs (170 GSM Gloss / Matte)</option>
-                <option value="Flyers & Handbills">Flyers & Pamphlets (A4 / A5 - 130 GSM)</option>
-                <option value="Stickers & Labels">Custom Stickers & Waterproof Labels</option>
-                <option value="ID Cards & Lanyards">PVC ID Cards & Satin Printed Lanyards</option>
-                <option value="Thesis & Book Binding">Book Binding (Hardcover / Softcover / Spiral)</option>
-                <option value="Flex & Banners">Signage, Flex Banners & Rollup Standee</option>
-              </select>
-            </div>
-
-            <div class="calc-group">
-              <label class="calc-label" for="calc-quantity">Select Quantity</label>
-              <select class="calc-select" id="calc-quantity">
-                <option value="100 Units">100 Units</option>
-                <option value="250 Units">250 Units</option>
-                <option value="500 Units" selected>500 Units (Popular)</option>
-                <option value="1000 Units">1,000 Units (Best Value)</option>
-                <option value="2000+ Bulk Units">2,000+ Bulk Units (Wholesale Rate)</option>
-              </select>
-            </div>
-
-            <div class="calc-group">
-              <label class="calc-label" for="calc-finish">Paper Finish & Lamination</label>
-              <select class="calc-select" id="calc-finish">
-                <option value="Matte Lamination">Premium Matte Finish</option>
-                <option value="Gloss Lamination">High Gloss UV Finish</option>
-                <option value="Velvet Soft Touch">Velvet Soft Touch</option>
-                <option value="Spot UV + Matte">Spot UV + Matte Lamination</option>
-                <option value="Metallic Gold Foil Stamping">Gold Foil Stamping</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="calc-action-bar">
-            <div class="calc-info-note">
-              <span>⚡ Direct WhatsApp Assistant will prepare your exact specifications instantly.</span>
-            </div>
-            <a id="calc-whatsapp-btn" href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20want%20to%20order%20500%20Business%20Cards%20with%20Matte%20Lamination." target="_blank" class="btn btn-primary calc-submit-btn">
-              💬 Order Specs via WhatsApp →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ═══ ABOUT & STORE LOCATION ═══ -->
     <section class="about-section section-padding" id="about">
@@ -549,7 +453,7 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#categories">Popular Categories</a></li>
-            <li><a href="#calculator">Instant Specifications</a></li>
+
             <li><a href="#about">About Our Store</a></li>
             <li><a href="https://wa.me/919790779720" target="_blank">WhatsApp Support</a></li>
           </ul>
