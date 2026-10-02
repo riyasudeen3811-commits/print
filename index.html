@@ -21,7 +21,7 @@
     <meta property="og:site_name" content="Adha Prints — Neighbourhood Print Store" />
     <meta property="og:title" content="Business Cards, Flyers & Custom Printing | Adha Prints Chennai" />
     <meta property="og:description" content="Order custom business cards, flyers, banners & stickers online. Fast turnaround, doorstep delivery across Chennai. Get an instant quote at Adha Prints." />
-    <meta property="og:image" content="http://localhost:5173hero-home.jpg?v=8" />
+    <meta property="og:image" content="hero-home.jpg" />
     <meta property="og:url" content="http://localhost:5173/" />
     <meta property="og:locale" content="en_IN" />
 
@@ -29,16 +29,15 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Business Cards, Flyers & Custom Printing | Adha Prints" />
     <meta name="twitter:description" content="High-quality printing solutions for businesses, events, education and everyday needs in Chennai." />
-    <meta name="twitter:image" content="http://localhost:5173hero-home.jpg?v=8" />
+    <meta name="twitter:image" content="hero-home.jpg" />
 
     <!-- Performance & Preload Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="hero-showcase-4k.jpg?v=4k" as="image" fetchpriority="high">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles.css?v=20260928_v2">
-    <link rel="stylesheet" href="premium-animations.css?v=20260928_v2">
+    <link rel="stylesheet" href="styles.css">
     
     <!-- JSON-LD LocalBusiness Schema -->
     <script type="application/ld+json">
@@ -46,7 +45,7 @@
       "@context": "https://schema.org",
       "@type": "PrintShop",
       "name": "Adha Prints",
-      "image": "http://localhost:5173hero-home.jpg?v=8",
+      "image": "hero-home.jpg",
       "@id": "http://localhost:5173/#organization",
       "url": "http://localhost:5173/",
       "telephone": "+919790779720",
@@ -76,15 +75,37 @@
     </script>
   </head>
   <body>
+    <!-- Top Scroll Progress Indicator -->
     <div class="scroll-progress-bar" id="scroll-progress"></div>
 
+    <!-- Ambient Cursor Glow Spotlight -->
+    <div class="cursor-glow" id="cursor-glow"></div>
 
+    <!-- ═══ TOP LIVE TICKER STATUS BAR ═══ -->
+    <div class="top-ticker-bar">
+      <div class="container top-ticker-inner">
+        <div class="ticker-status-pill">
+          <span class="status-dot-pulse"></span>
+          <span>Kottivakkam Print Hub Active</span>
+        </div>
+        <div class="ticker-items">
+          <span class="ticker-item">⚡ <strong>Same-Day Proofing</strong> Available</span>
+          <span class="ticker-item">🎨 <strong>Heidelberg 5-Color</strong> Offset Press</span>
+          <span class="ticker-item">📦 <strong>Express Doorstep Delivery</strong> Across Chennai</span>
+        </div>
+        <div class="ticker-contact-links">
+          <a href="tel:+919790779720">📞 +91 97907 79720</a>
+          <span style="opacity:0.3;">|</span>
+          <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20have%20an%20enquiry." target="_blank" style="color:#25D366;font-weight:600;">💬 WhatsApp Desk</a>
+        </div>
+      </div>
+    </div>
 
     <!-- ═══ MAIN HEADER ═══ -->
     <header class="site-header" id="navbar">
       <div class="container header-main">
         <!-- Logo -->
-        <a href="#" class="site-logo">
+        <a href="index.html" class="site-logo">
           <div class="logo-mark">AP</div>
           <div class="logo-text-group">
             <span class="brand-name">ADHA<span class="brand-accent"> PRINTS</span></span>
@@ -111,13 +132,12 @@
 
         <!-- Header Right Actions -->
         <div class="header-actions">
-          
           <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20want%20to%20get%20an%20instant%20quote." class="btn btn-whatsapp header-wa-btn" target="_blank">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             <span>Quote</span>
           </a>
 
-          <div class="mobile-menu-btn" id="mobile-menu-btn">
+          <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
             <span></span><span></span><span></span>
           </div>
         </div>
@@ -132,7 +152,8 @@
             <li class="nav-item"><a href="#stickers" class="nav-link">Stickers & Labels</a></li>
             <li class="nav-item"><a href="#signage" class="nav-link">Signage & Apparel</a></li>
             <li class="nav-item"><a href="#binding" class="nav-link">ID & Thesis Binding</a></li>
-
+            <li class="nav-item"><a href="#about" class="nav-link">About Store</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact & Location</a></li>
           </ul>
         </div>
       </nav>
@@ -146,16 +167,149 @@
       <a href="#stickers">Stickers & Labels</a>
       <a href="#signage">Signage & Apparel</a>
       <a href="#binding">ID & Thesis Binding</a>
-
+      <a href="#about">About Our Store</a>
       <a href="#contact">Contact Us</a>
     </div>
 
-    <!-- ═══ HERO SECTION — UPLOADED IMAGE BELOW NAVIGATION ═══ -->
-    <section class="hero-image-only" id="home" style="width: 100% !important; max-width: 100% !important; min-height: calc(100vh - 120px) !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; background: #0b0f19 !important; display: flex !important; align-items: center !important; justify-content: center !important;">
-      <div class="hero-image-container" style="width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;">
-        <img src="hero-showcase-4k.jpg?v=4k" alt="Adha Prints — Complete Printing Showcase" class="hero-full-banner-img" style="width: 100% !important; height: 100% !important; min-height: calc(100vh - 120px) !important; max-width: 100% !important; object-fit: cover !important; object-position: center !important; display: block !important;" fetchpriority="high" decoding="async" />
+    <!-- ═══ HERO SECTION — 4K SHOWCASE WITH INTERACTIVE HOTSPOT BEACONS ═══ -->
+    <section class="hero-image-only" id="home">
+      <div class="hero-image-container">
+        <img src="hero-showcase-4k.jpg?v=4k" alt="Adha Prints — Complete Printing Showcase" class="hero-full-banner-img" fetchpriority="high" decoding="async" />
+        
+        <!-- Interactive Hotspots Overlay -->
+        <div class="hero-hotspots-layer" id="hero-hotspots">
+          <!-- Hotspot 1: Visiting Cards -->
+          <div class="hero-hotspot" style="top: 72%; left: 24%;" data-product="Visiting Cards">
+            <div class="hotspot-beacon">
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-core"></div>
+            </div>
+            <div class="hotspot-pill">💳 Visiting Cards</div>
+            <div class="hotspot-popover">
+              <span class="popover-badge">Bestseller</span>
+              <h4 class="popover-title">Velvet & Spot UV Cards</h4>
+              <p class="popover-desc">350 GSM Art Board with Velvet Soft Touch, Spot UV, & Gold Foil Stamping.</p>
+              <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20want%20to%20order%20Visiting%20Cards" class="popover-cta" target="_blank">Instant Quote →</a>
+            </div>
+          </div>
+
+          <!-- Hotspot 2: Flyers & Leaflets -->
+          <div class="hero-hotspot" style="top: 80%; left: 34%;" data-product="Flyers">
+            <div class="hotspot-beacon">
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-core"></div>
+            </div>
+            <div class="hotspot-pill">📄 Marketing Flyers</div>
+            <div class="hotspot-popover">
+              <span class="popover-badge">Fast Dispatch</span>
+              <h4 class="popover-title">Promotional Flyers & Leaflets</h4>
+              <p class="popover-desc">130 - 170 GSM Sunshine Paper with razor-sharp CMYK Heidelberg print.</p>
+              <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20want%20to%20order%20Flyers" class="popover-cta" target="_blank">Instant Quote →</a>
+            </div>
+          </div>
+
+          <!-- Hotspot 3: Booklets & Thesis Binding -->
+          <div class="hero-hotspot" style="top: 78%; left: 47%;" data-product="Thesis Binding">
+            <div class="hotspot-beacon">
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-core"></div>
+            </div>
+            <div class="hotspot-pill">📘 Thesis & Book Binding</div>
+            <div class="hotspot-popover">
+              <span class="popover-badge">Institutional</span>
+              <h4 class="popover-title">Hardcover & Golden Foil</h4>
+              <p class="popover-desc">Premium thesis binding with embossed golden foil text, wiro & spiral binding.</p>
+              <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20need%20Thesis%20Book%20Binding" class="popover-cta" target="_blank">Instant Quote →</a>
+            </div>
+          </div>
+
+          <!-- Hotspot 4: Die-Cut Round Stickers -->
+          <div class="hero-hotspot" style="top: 75%; left: 77%;" data-product="Custom Stickers">
+            <div class="hotspot-beacon">
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-core"></div>
+            </div>
+            <div class="hotspot-pill">🏷️ Die-Cut Stickers</div>
+            <div class="hotspot-popover">
+              <span class="popover-badge">Waterproof</span>
+              <h4 class="popover-title">Custom Vinyl & Foil Stickers</h4>
+              <p class="popover-desc">Waterproof, scratch-resistant vinyl product labels and precision die-cuts.</p>
+              <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20want%20custom%20stickers" class="popover-cta" target="_blank">Instant Quote →</a>
+            </div>
+          </div>
+
+          <!-- Hotspot 5: PVC ID Cards & Lanyards -->
+          <div class="hero-hotspot" style="top: 78%; left: 88%;" data-product="ID Cards">
+            <div class="hotspot-beacon">
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-core"></div>
+            </div>
+            <div class="hotspot-pill">🪪 PVC ID Cards</div>
+            <div class="hotspot-popover">
+              <span class="popover-badge">Corporate</span>
+              <h4 class="popover-title">Employee Badges & Lanyards</h4>
+              <p class="popover-desc">Durable thermal PVC employee ID cards and custom sublimated satin lanyards.</p>
+              <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20need%20PVC%20ID%20Cards" class="popover-cta" target="_blank">Instant Quote →</a>
+            </div>
+          </div>
+
+          <!-- Hotspot 6: Heidelberg Machine Background -->
+          <div class="hero-hotspot" style="top: 25%; left: 85%;" data-product="Heidelberg Offset">
+            <div class="hotspot-beacon">
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-wave"></div>
+              <div class="hotspot-core"></div>
+            </div>
+            <div class="hotspot-pill">🖨️ Heidelberg Press</div>
+            <div class="hotspot-popover">
+              <span class="popover-badge">Precision Machinery</span>
+              <h4 class="popover-title">Commercial Offset Engine</h4>
+              <p class="popover-desc">State-of-the-art multi-colour Heidelberg offset printing machinery for massive bulk quality.</p>
+              <a href="#about" class="popover-cta">Explore Facility →</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- ═══ HERO FLOATING TRUST STRIP ═══ -->
+    <div class="hero-trust-bar">
+      <div class="container hero-trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon-box">⚡</div>
+          <div class="trust-text">
+            <h4>Sub-24h Dispatch</h4>
+            <p>Rapid express turnaround on standard jobs</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">🎨</div>
+          <div class="trust-text">
+            <h4>Heidelberg Accuracy</h4>
+            <p>Strict CMYK color reproduction standard</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">🛡️</div>
+          <div class="trust-text">
+            <h4>100% Quality Check</h4>
+            <p>Hand-inspected before final packaging</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">📍</div>
+          <div class="trust-text">
+            <h4>Doorstep Delivery</h4>
+            <p>Kottivakkam, OMR, ECR & all Chennai</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ═══ HERO BOTTOM RUNNING MARQUEE BANNER ═══ -->
     <div class="hero-services-marquee">
@@ -193,7 +347,8 @@
     <section class="promo-banners-section section-padding">
       <div class="container">
         <div class="banners-grid">
-          <div class="banner-card banner-large" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 58, 138, 0.7)), url('business-cards.jpg');">
+          <div class="banner-card banner-large" data-tilt style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 58, 138, 0.75)), url('business-cards.jpg');">
+            <div class="card-specular-glow"></div>
             <div class="banner-content">
               <span class="banner-tag">BESTSELLER COLLECTION</span>
               <h3 class="banner-title">Visiting Cards & Business Stationery</h3>
@@ -202,7 +357,8 @@
             </div>
           </div>
 
-          <div class="banner-card banner-tall" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(88, 28, 135, 0.7)), url('stickers.jpg');">
+          <div class="banner-card banner-tall" data-tilt style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(88, 28, 135, 0.75)), url('stickers.jpg');">
+            <div class="card-specular-glow"></div>
             <div class="banner-content">
               <span class="banner-tag">WATERPROOF & DIE-CUT</span>
               <h3 class="banner-title">Custom Stickers & Product Labels</h3>
@@ -211,7 +367,8 @@
             </div>
           </div>
 
-          <div class="banner-card banner-wide" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(6, 78, 59, 0.7)), url('flyers.jpg');">
+          <div class="banner-card banner-wide" data-tilt style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(6, 78, 59, 0.75)), url('flyers.jpg');">
+            <div class="card-specular-glow"></div>
             <div class="banner-content">
               <span class="banner-tag">MARKETING & SIGNAGE</span>
               <h3 class="banner-title">Banners, Flyers & Corporate ID</h3>
@@ -237,13 +394,86 @@
 
         <div class="categories-carousel-wrapper">
           <div class="categories-grid-cards" id="popular-categories-grid">
-            <!-- Dynamically Rendered by JS -->
+            <div class="category-card" data-tilt>
+              <div class="card-specular-glow"></div>
+              <div class="category-card-img">
+                <img src="business-cards.jpg" alt="Visiting Cards" loading="lazy" decoding="async" />
+                <span class="category-badge">12+ Options</span>
+              </div>
+              <div class="category-card-body">
+                <h3 class="category-title" style="font-size:1.15rem;margin-bottom:6px;color:#0f172a;">Visiting Cards</h3>
+                <p class="category-desc" style="font-size:0.86rem;color:#64748b;margin-bottom:16px;">Art, Matte, Velvet, Spot UV & Metallic Foil</p>
+                <a href="#cards" class="btn btn-outline-dark category-explore" data-filter="corporate">View Options →</a>
+              </div>
+            </div>
+            <div class="category-card" data-tilt>
+              <div class="card-specular-glow"></div>
+              <div class="category-card-img">
+                <img src="stickers.jpg" alt="Stickers & Labels" loading="lazy" decoding="async" />
+                <span class="category-badge">10+ Options</span>
+              </div>
+              <div class="category-card-body">
+                <h3 class="category-title" style="font-size:1.15rem;margin-bottom:6px;color:#0f172a;">Stickers & Labels</h3>
+                <p class="category-desc" style="font-size:0.86rem;color:#64748b;margin-bottom:16px;">Waterproof Vinyl, Synthetic & Die-Cut</p>
+                <a href="#cards" class="btn btn-outline-dark category-explore" data-filter="events">View Options →</a>
+              </div>
+            </div>
+            <div class="category-card" data-tilt>
+              <div class="card-specular-glow"></div>
+              <div class="category-card-img">
+                <img src="brochures.jpg" alt="Brochures & Flyers" loading="lazy" decoding="async" />
+                <span class="category-badge">8+ Options</span>
+              </div>
+              <div class="category-card-body">
+                <h3 class="category-title" style="font-size:1.15rem;margin-bottom:6px;color:#0f172a;">Brochures & Flyers</h3>
+                <p class="category-desc" style="font-size:0.86rem;color:#64748b;margin-bottom:16px;">Bi-fold, Tri-fold & Promotional Leaflets</p>
+                <a href="#cards" class="btn btn-outline-dark category-explore" data-filter="marketing">View Options →</a>
+              </div>
+            </div>
+            <div class="category-card" data-tilt>
+              <div class="card-specular-glow"></div>
+              <div class="category-card-img">
+                <img src="offset-printing.jpg" alt="Flex & Signage" loading="lazy" decoding="async" />
+                <span class="category-badge">6+ Options</span>
+              </div>
+              <div class="category-card-body">
+                <h3 class="category-title" style="font-size:1.15rem;margin-bottom:6px;color:#0f172a;">Flex & Signage</h3>
+                <p class="category-desc" style="font-size:0.86rem;color:#64748b;margin-bottom:16px;">Star Flex, Standees & Foam Board</p>
+                <a href="#cards" class="btn btn-outline-dark category-explore" data-filter="custom">View Options →</a>
+              </div>
+            </div>
+            <div class="category-card" data-tilt>
+              <div class="card-specular-glow"></div>
+              <div class="category-card-img">
+                <img src="id-cards.jpg" alt="ID Cards & Lanyards" loading="lazy" decoding="async" />
+                <span class="category-badge">5+ Options</span>
+              </div>
+              <div class="category-card-body">
+                <h3 class="category-title" style="font-size:1.15rem;margin-bottom:6px;color:#0f172a;">ID Cards & Lanyards</h3>
+                <p class="category-desc" style="font-size:0.86rem;color:#64748b;margin-bottom:16px;">PVC Cards & Custom Satin Lanyards</p>
+                <a href="#cards" class="btn btn-outline-dark category-explore" data-filter="corporate">View Options →</a>
+              </div>
+            </div>
+            <div class="category-card" data-tilt>
+              <div class="card-specular-glow"></div>
+              <div class="category-card-img">
+                <img src="binding.jpg" alt="Thesis Book Binding" loading="lazy" decoding="async" />
+                <span class="category-badge">7+ Options</span>
+              </div>
+              <div class="category-card-body">
+                <h3 class="category-title" style="font-size:1.15rem;margin-bottom:6px;color:#0f172a;">Thesis Book Binding</h3>
+                <p class="category-desc" style="font-size:0.86rem;color:#64748b;margin-bottom:16px;">Hardcover, Softcover & Golden Foil Text</p>
+                <a href="#cards" class="btn btn-outline-dark category-explore" data-filter="custom">View Options →</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ POPULAR PRINTING — AUTO-RUNNING MARQUEE BANNER ═══ -->
+
+
+    <!-- ═══ POPULAR PRINTING — CONTINUOUS SPEED RUNNING MARQUEE ═══ -->
     <section class="featured-marquee-section section-padding" id="popular">
       <div class="container">
         <div class="text-center reveal">
@@ -252,24 +482,96 @@
           <p class="section-subtitle">Our most requested printing services — continuous high speed production.</p>
         </div>
 
-        <!-- Filter Buttons -->
-        <div class="filter-container reveal">
-          <button class="filter-btn active" data-filter="all">All Printing</button>
-          <button class="filter-btn" data-filter="bestseller">⭐ Bestsellers</button>
-          <button class="filter-btn" data-filter="corporate">🏢 Business Stationery</button>
-          <button class="filter-btn" data-filter="marketing">📣 Marketing & Flyers</button>
-          <button class="filter-btn" data-filter="events">🎉 Events & Cards</button>
-          <button class="filter-btn" data-filter="custom">✂️ Binding & Special</button>
+        <!-- Filter Segmented Pill Control -->
+        <div class="filter-segmented-container reveal">
+          <div class="segmented-pill-wrapper">
+            <button class="filter-btn active" data-filter="all">All Printing</button>
+            <button class="filter-btn" data-filter="bestseller">⭐ Bestsellers</button>
+            <button class="filter-btn" data-filter="corporate">🏢 Business Stationery</button>
+            <button class="filter-btn" data-filter="marketing">📣 Marketing & Flyers</button>
+            <button class="filter-btn" data-filter="events">🎉 Events & Cards</button>
+            <button class="filter-btn" data-filter="custom">✂️ Binding & Special</button>
+          </div>
         </div>
 
         <!-- Continuous Running Marquee Track -->
         <div class="featured-slider-wrapper">
           <div class="featured-marquee-track">
             <div class="featured-slider" id="featured-slider">
-              <!-- Cards injected by JS -->
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="business-cards.jpg" alt="Business Cards (Visiting Cards)" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">⭐ Bestseller</span></div>
+                <div class="featured-card-content"><h4>Business Cards (Visiting Cards)</h4><p>Art, Matte, Velvet Soft Touch, Gold Foil Stamping, Spot UV & Metallic cards.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Business Cards (Visiting Cards)" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="letterheads.jpg" alt="Letterheads & Envelopes" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Corporate</span></div>
+                <div class="featured-card-content"><h4>Letterheads & Envelopes</h4><p>Executive letterheads & branded envelopes on 100 GSM sunshine paper stock.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Letterheads & Envelopes" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="brochures.jpg" alt="Brochures & Catalogs" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">🔥 Popular</span></div>
+                <div class="featured-card-content"><h4>Brochures & Catalogs</h4><p>Bi-fold, tri-fold & multi-page brochures with vibrant CMYK color fidelity.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Brochures & Catalogs" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="flyers.jpg" alt="Flyers & Pamphlets" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">⚡ 24h Express</span></div>
+                <div class="featured-card-content"><h4>Flyers & Pamphlets</h4><p>Promotional flyers, leaflets & handbills for corporate events & marketing.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Flyers & Pamphlets" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="invitations.jpg" alt="Invitations & Greeting Cards" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Specialty</span></div>
+                <div class="featured-card-content"><h4>Invitations & Greeting Cards</h4><p>Wedding cards, event invitations & greeting cards with foil embossing.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Invitations & Greeting Cards" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="stickers.jpg" alt="Custom Stickers & Labels" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Waterproof</span></div>
+                <div class="featured-card-content"><h4>Custom Stickers & Labels</h4><p>Art paper, Glossy, Synthetic, Waterproof Vinyl & Die-Cut product labels.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Custom Stickers & Labels" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="id-cards.jpg" alt="ID Cards & Lanyards" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">High Security</span></div>
+                <div class="featured-card-content"><h4>ID Cards & Lanyards</h4><p>PVC employee ID cards, student badges & custom printed satin lanyards.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="ID Cards & Lanyards" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="offset-printing.jpg" alt="Offset & Flex Signage" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Bulk Master</span></div>
+                <div class="featured-card-content"><h4>Offset & Flex Signage</h4><p>Large-format flex banners, star flex, standees & offset commercial printing.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Offset & Flex Signage" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="binding.jpg" alt="Book & Thesis Binding" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Professional</span></div>
+                <div class="featured-card-content"><h4>Book & Thesis Binding</h4><p>Spiral, wire-o, softcover & hardcover thesis book binding with golden foil text.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Book & Thesis Binding" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
             </div>
             <div class="featured-slider" id="featured-slider-dup" aria-hidden="true">
-              <!-- Duplicated Cards injected by JS -->
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="business-cards.jpg" alt="Business Cards (Visiting Cards)" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">⭐ Bestseller</span></div>
+                <div class="featured-card-content"><h4>Business Cards (Visiting Cards)</h4><p>Art, Matte, Velvet Soft Touch, Gold Foil Stamping, Spot UV & Metallic cards.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Business Cards (Visiting Cards)" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="letterheads.jpg" alt="Letterheads & Envelopes" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Corporate</span></div>
+                <div class="featured-card-content"><h4>Letterheads & Envelopes</h4><p>Executive letterheads & branded envelopes on 100 GSM sunshine paper stock.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Letterheads & Envelopes" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="brochures.jpg" alt="Brochures & Catalogs" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">🔥 Popular</span></div>
+                <div class="featured-card-content"><h4>Brochures & Catalogs</h4><p>Bi-fold, tri-fold & multi-page brochures with vibrant CMYK color fidelity.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Brochures & Catalogs" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="flyers.jpg" alt="Flyers & Pamphlets" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">⚡ 24h Express</span></div>
+                <div class="featured-card-content"><h4>Flyers & Pamphlets</h4><p>Promotional flyers, leaflets & handbills for corporate events & marketing.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Flyers & Pamphlets" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="invitations.jpg" alt="Invitations & Greeting Cards" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Specialty</span></div>
+                <div class="featured-card-content"><h4>Invitations & Greeting Cards</h4><p>Wedding cards, event invitations & greeting cards with foil embossing.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Invitations & Greeting Cards" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="stickers.jpg" alt="Custom Stickers & Labels" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Waterproof</span></div>
+                <div class="featured-card-content"><h4>Custom Stickers & Labels</h4><p>Art paper, Glossy, Synthetic, Waterproof Vinyl & Die-Cut product labels.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Custom Stickers & Labels" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="id-cards.jpg" alt="ID Cards & Lanyards" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">High Security</span></div>
+                <div class="featured-card-content"><h4>ID Cards & Lanyards</h4><p>PVC employee ID cards, student badges & custom printed satin lanyards.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="ID Cards & Lanyards" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="offset-printing.jpg" alt="Offset & Flex Signage" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Bulk Master</span></div>
+                <div class="featured-card-content"><h4>Offset & Flex Signage</h4><p>Large-format flex banners, star flex, standees & offset commercial printing.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Offset & Flex Signage" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
+              <div class="featured-card">
+                <div class="featured-card-img"><img src="binding.jpg" alt="Book & Thesis Binding" loading="lazy" decoding="async" width="600" height="400" /><span class="featured-badge">Professional</span></div>
+                <div class="featured-card-content"><h4>Book & Thesis Binding</h4><p>Spiral, wire-o, softcover & hardcover thesis book binding with golden foil text.</p><button class="btn btn-outline-dark quick-quote-trigger" data-title="Book & Thesis Binding" style="padding:6px 14px;font-size:0.8rem;width:100%;">Enquire Now →</button></div>
+              </div>
             </div>
           </div>
         </div>
@@ -285,7 +587,141 @@
           <p class="section-subtitle">Explore our full catalog of premium print options tailored for business & everyday needs.</p>
         </div>
         <div class="products-grid stagger-children" id="products-grid">
-          <!-- Cards injected by JS -->
+          <div class="product-card visible" data-tilt data-id="business-cards">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="business-cards.jpg" alt="Business Cards (Visiting Cards)" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">⭐ Bestseller</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Business Cards (Visiting Cards)</h3>
+              <p class="product-card-desc">Art, Matte, Velvet Soft Touch, Gold Foil Stamping, Spot UV & Metallic cards.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="Business Cards (Visiting Cards)" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
+          <div class="product-card visible" data-tilt data-id="letterheads">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="letterheads.jpg" alt="Letterheads & Envelopes" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">Corporate</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Letterheads & Envelopes</h3>
+              <p class="product-card-desc">Executive letterheads & branded envelopes on 100 GSM sunshine paper stock.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="Letterheads & Envelopes" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
+          <div class="product-card visible" data-tilt data-id="brochures">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="brochures.jpg" alt="Brochures & Catalogs" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">🔥 Popular</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Brochures & Catalogs</h3>
+              <p class="product-card-desc">Bi-fold, tri-fold & multi-page brochures with vibrant CMYK color fidelity.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="Brochures & Catalogs" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
+          <div class="product-card visible" data-tilt data-id="flyers">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="flyers.jpg" alt="Flyers & Pamphlets" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">⚡ 24h Express</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Flyers & Pamphlets</h3>
+              <p class="product-card-desc">Promotional flyers, leaflets & handbills for corporate events & marketing.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="Flyers & Pamphlets" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
+          <div class="product-card visible" data-tilt data-id="invitations">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="invitations.jpg" alt="Invitations & Greeting Cards" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">Specialty</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Invitations & Greeting Cards</h3>
+              <p class="product-card-desc">Wedding cards, event invitations & greeting cards with foil embossing.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="Invitations & Greeting Cards" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
+          <div class="product-card visible" data-tilt data-id="stickers">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="stickers.jpg" alt="Custom Stickers & Labels" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">Waterproof</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Custom Stickers & Labels</h3>
+              <p class="product-card-desc">Art paper, Glossy, Synthetic, Waterproof Vinyl & Die-Cut product labels.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="Custom Stickers & Labels" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
+          <div class="product-card visible" data-tilt data-id="id-cards">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="id-cards.jpg" alt="ID Cards & Lanyards" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">High Security</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">ID Cards & Lanyards</h3>
+              <p class="product-card-desc">PVC employee ID cards, student badges & custom printed satin lanyards.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="ID Cards & Lanyards" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
+          <div class="product-card visible" data-tilt data-id="offset-printing">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="offset-printing.jpg" alt="Offset & Flex Signage" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">Bulk Master</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Offset & Flex Signage</h3>
+              <p class="product-card-desc">Large-format flex banners, star flex, standees & offset commercial printing.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="Offset & Flex Signage" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
+          <div class="product-card visible" data-tilt data-id="binding">
+            <div class="card-specular-glow"></div>
+            <div class="product-card-image">
+              <img src="binding.jpg" alt="Book & Thesis Binding" loading="lazy" decoding="async" width="600" height="400" />
+              <span class="product-tag">Professional</span>
+              <div class="card-shine"></div>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Book & Thesis Binding</h3>
+              <p class="product-card-desc">Spiral, wire-o, softcover & hardcover thesis book binding with golden foil text.</p>
+              <button class="btn btn-outline-dark quick-quote-trigger" data-title="Book & Thesis Binding" style="margin-top:auto;">
+                💬 Get Instant Quote
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -352,31 +788,102 @@
     </section>
 
     <!-- ═══ SEE THE TRANSFORMATION (BEFORE/AFTER SLIDER) ═══ -->
-    <section class="transformation-section section-padding">
+    <section class="transformation-section section-padding" id="transformation">
       <div class="container">
         <div class="text-center reveal">
-          <div class="accent-line"></div>
-          <h2 class="section-title">See the Transformation</h2>
-          <p class="section-subtitle">Slide to compare raw digital artwork with our ultra-premium printed product output.</p>
+          <div class="brand-pill-badge mb-3">
+            <span class="pulse-dot"></span> ADHA PRINTS MASTER CRAFTSMANSHIP
+          </div>
+          <h2 class="section-title">
+            The <span class="highlight-underline">Adha Prints<svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M5.5 125.883C149.207 118.384 329.838 103.383 495.5 125.883"></path></svg></span> Transformation
+          </h2>
+          <p class="section-subtitle">
+            Slide to experience the difference between raw digital artwork proofs and <strong>Adha Prints'</strong> signature 350 GSM Velvet Soft Touch, Spot UV & Foil Stamped finishes.
+          </p>
         </div>
 
-        <div class="comparison-container reveal" id="comparison">
-          <div class="comparison-after">
-            <img src="business-cards.jpg" alt="Finished Printed Velvet Spot UV Card" loading="lazy" decoding="async" width="900" height="440" />
-            <span class="comp-badge badge-after">✨ Finished Printed Output</span>
+        <!-- Sample Switcher Pills -->
+        <div class="sample-switcher-container reveal mb-4">
+          <div class="sample-switcher-wrapper">
+            <button class="sample-tab-btn active" data-sample="cards" data-before="letterheads.jpg" data-after="business-cards.jpg" data-title="Visiting Cards">🎴 Visiting Cards</button>
+            <button class="sample-tab-btn" data-sample="stationery" data-before="letterheads.jpg" data-after="hero-about.jpg" data-title="Business Stationery">📜 Executive Letterheads</button>
+            <button class="sample-tab-btn" data-sample="stickers" data-before="stickers.jpg" data-after="hero-services.jpg" data-title="Waterproof Stickers">🏷️ Custom Stickers</button>
+            <button class="sample-tab-btn" data-sample="binding" data-before="binding.jpg" data-after="hero-contact.jpg" data-title="Thesis Book Binding">📘 Hardcover Book Binding</button>
           </div>
-          <div class="comparison-before" id="comparison-before">
-            <img src="letterheads.jpg" alt="Raw Digital Artwork File" loading="lazy" decoding="async" width="900" height="440" />
-            <span class="comp-badge badge-before">💻 Raw Digital File</span>
+        </div>
+
+        <!-- Interactive Comparison Showcase Frame -->
+        <div class="comparison-showcase-wrapper reveal">
+          <div class="comparison-container" id="comparison">
+            <!-- Glassmorphic Frame Header Overlay -->
+            <div class="comp-frame-header">
+              <div class="brand-tag-glow">
+                <span class="brand-logo-icon">AP</span>
+                <strong>ADHA PRINTS</strong>
+                <span class="location-dot">• Kottivakkam, Chennai</span>
+              </div>
+              <div class="quality-stamp">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                100% CMYK Color Precision
+              </div>
+            </div>
+
+            <!-- After Image (Finished Print) -->
+            <div class="comparison-after">
+              <img id="comp-img-after" src="business-cards.jpg" alt="Adha Prints Finished Printed Output" loading="lazy" decoding="async" width="900" height="440" />
+              <span class="comp-badge badge-after">✨ Adha Prints Premium Output</span>
+            </div>
+
+            <!-- Before Image (Digital File) -->
+            <div class="comparison-before" id="comparison-before">
+              <img id="comp-img-before" src="letterheads.jpg" alt="Raw Digital Artwork File" loading="lazy" decoding="async" width="900" height="440" />
+              <span class="comp-badge badge-before">💻 Raw Digital File Proof</span>
+            </div>
+
+            <!-- Interactive Slider Line & Handle -->
+            <div class="comparison-slider" id="comparison-slider">
+              <div class="slider-handle" title="Drag left/right to compare">
+                <span class="handle-arrow">‹</span>
+                <span class="handle-brand">AP</span>
+                <span class="handle-arrow">›</span>
+              </div>
+            </div>
           </div>
-          <div class="comparison-slider" id="comparison-slider">
-            <div class="slider-handle">↔</div>
+        </div>
+
+        <!-- Spec Highlights Grid -->
+        <div class="comp-highlights-grid reveal mt-4">
+          <div class="comp-highlight-card">
+            <span class="comp-icon">🖨️</span>
+            <div>
+              <h4>Heidelberg Offset Precision</h4>
+              <p>2400 DPI ultra-sharp dot resolution with zero ink bleeding</p>
+            </div>
           </div>
+          <div class="comp-highlight-card">
+            <span class="comp-icon">✨</span>
+            <div>
+              <h4>Velvet Touch & Raised Spot UV</h4>
+              <p>Silky soft matte lamination with 3D tactile glossy highlights</p>
+            </div>
+          </div>
+          <div class="comp-highlight-card">
+            <span class="comp-icon">🛡️</span>
+            <div>
+              <h4>Adha Prints Quality Shield</h4>
+              <p>100% color accuracy guarantee with express doorstep delivery</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Comparison Presets -->
+        <div class="comp-presets-bar reveal mt-4">
+          <button type="button" class="comp-preset-btn" data-pos="10">💻 Raw Proof View</button>
+          <button type="button" class="comp-preset-btn active" data-pos="50">⚖️ 50/50 Split View</button>
+          <button type="button" class="comp-preset-btn" data-pos="90">✨ Adha Prints Master Finish</button>
         </div>
       </div>
     </section>
-
-
 
     <!-- ═══ ABOUT & STORE LOCATION ═══ -->
     <section class="about-section section-padding" id="about">
@@ -385,35 +892,48 @@
           <div class="about-text reveal-left">
             <div class="accent-line"></div>
             <h2 class="section-title">Your Trusted Neighbourhood Print Store in Chennai</h2>
-            <p class="about-lead">Adha Prints delivers high-precision printing solutions using state-of-the-art offset and digital technology for businesses, startups, educational institutions, and individuals.</p>
-            <p>From executive visiting cards and vibrant marketing flyers to custom waterproof stickers, thesis binding, and corporate signage — we ensure crisp color accuracy, fast turnaround times, and affordable wholesale pricing.</p>
-            
-            <div class="store-info-box">
-              <div class="info-item">
-                <div class="info-icon">📍</div>
+            <p class="about-lead">Adha Prints delivers high-precision printing solutions using state-of-the-art offset and digital            <!-- Key Capabilities Grid -->
+            <div class="about-highlights-grid">
+              <div class="about-highlight-item">
+                <span class="highlight-icon">🖨️</span>
                 <div>
-                  <strong>Store Location</strong>
-                  <p>No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai - 600 041</p>
+                  <strong>Precision Offset & Digital</strong>
+                  <p>Multi-color Heidelberg offset and Konica Minolta digital printing technology</p>
                 </div>
               </div>
-              <div class="info-item">
-                <div class="info-icon">🕒</div>
+              <div class="about-highlight-item">
+                <span class="highlight-icon">⚡</span>
                 <div>
-                  <strong>Operating Hours</strong>
-                  <p>Monday – Saturday: 9:00 AM – 8:00 PM</p>
+                  <strong>Express Turnaround</strong>
+                  <p>Fast dispatch for visiting cards, thesis book binding, stickers & flyers</p>
                 </div>
               </div>
-              <div class="info-item">
-                <div class="info-icon">📞</div>
+              <div class="about-highlight-item">
+                <span class="highlight-icon">📦</span>
                 <div>
-                  <strong>Contact & Enquiries</strong>
-                  <p>Phone: +91 97907 79720 | Email: madhaprints@gmail.com</p>
+                  <strong>Doorstep Delivery</strong>
+                  <p>Reliable packaging and safe doorstep delivery across Chennai</p>
+                </div>
+              </div>
+              <div class="about-highlight-item">
+                <span class="highlight-icon">🏷️</span>
+                <div>
+                  <strong>Wholesale & Retail Pricing</strong>
+                  <p>Direct manufacturer rates for corporate, student, and individual print orders</p>
                 </div>
               </div>
             </div>
+
+            <div class="about-cta-bar">
+              <a href="#contact" class="btn btn-primary">
+                <span>📍 View Official Contact Numbers & Store Map</span>
+                <span class="btn-arrow">↓</span>
+              </a>
+            </div>
           </div>
 
-          <div class="about-image-card reveal-right">
+          <div class="about-image-card reveal-right" data-tilt>
+            <div class="card-specular-glow"></div>
             <img src="offset-printing.jpg" alt="Adha Prints Offset Machine & Quality Check" loading="lazy" decoding="async" width="600" height="400" />
             <div class="experience-badge">
               <span class="exp-number">100%</span>
@@ -424,15 +944,201 @@
       </div>
     </section>
 
+    <!-- ═══ CONTACT & STORE LOCATION (EXACT SIGNBOARD INFO & GOOGLE MAP) ═══ -->
+    <section class="contact-section-eye-catching section-padding" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="contact-header-clean reveal">
+          <div class="contact-header-badge">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            <span>Store Location & Contact Info</span>
+          </div>
+          <h2 class="section-title">Get in Touch With Adha Prints</h2>
+          <p>Official contact numbers, store address, and Google Map directions to our Kottivakkam shop.</p>
+        </div>
+
+        <!-- 2-Column Eye-Catching Grid -->
+        <div class="contact-eye-grid">
+          <!-- Left: Official Signboard Plaque -->
+          <div class="contact-exact-card reveal-left">
+            <div class="exact-card-header">
+              <div class="exact-card-badge">
+                <span class="badge-dot-gold"></span>
+                <span>Adha Prints • Kottivakkam</span>
+              </div>
+              <span class="exact-card-verified">Verified Store Info</span>
+            </div>
+
+            <!-- 1. Phone Numbers Block -->
+            <div class="exact-info-block">
+              <div class="exact-icon-circle phone-circle" aria-label="Phone Numbers">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="#0b1329"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+              </div>
+              <div class="exact-content">
+                <span class="exact-content-label">Phone Numbers</span>
+                <div class="exact-phone-list">
+                  <!-- Row 1: 97907 79720 -->
+                  <div class="exact-phone-row">
+                    <a href="tel:9790779720" class="exact-phone-link" title="Call 97907 79720">
+                      <span>97907 79720</span>
+                    </a>
+                    <div class="phone-quick-actions">
+                      <a href="tel:9790779720" class="phone-action-btn btn-act-call" title="Call directly">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+                        <span>Call</span>
+                      </a>
+                      <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20have%20an%20enquiry." target="_blank" class="phone-action-btn btn-act-wa" title="Chat on WhatsApp">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        <span>WhatsApp</span>
+                      </a>
+                      <button type="button" class="phone-action-btn btn-act-copy copy-inline-btn" data-copy="9790779720" title="Copy 97907 79720">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                        <span>Copy</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Row 2: 97104 88259 -->
+                  <div class="exact-phone-row">
+                    <a href="tel:9710488259" class="exact-phone-link" title="Call 97104 88259">
+                      <span>97104 88259</span>
+                    </a>
+                    <div class="phone-quick-actions">
+                      <a href="tel:9710488259" class="phone-action-btn btn-act-call" title="Call directly">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+                        <span>Call</span>
+                      </a>
+                      <a href="https://wa.me/919710488259?text=Hi%20Adha%20Prints%2C%20I%20have%20an%20enquiry." target="_blank" class="phone-action-btn btn-act-wa" title="Chat on WhatsApp">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        <span>WhatsApp</span>
+                      </a>
+                      <button type="button" class="phone-action-btn btn-act-copy copy-inline-btn" data-copy="9710488259" title="Copy 97104 88259">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                        <span>Copy</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Row 3: 97104 88192 -->
+                  <div class="exact-phone-row">
+                    <a href="tel:9710488192" class="exact-phone-link" title="Call 97104 88192">
+                      <span>97104 88192</span>
+                    </a>
+                    <div class="phone-quick-actions">
+                      <a href="tel:9710488192" class="phone-action-btn btn-act-call" title="Call directly">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+                        <span>Call</span>
+                      </a>
+                      <button type="button" class="phone-action-btn btn-act-copy copy-inline-btn" data-copy="9710488192" title="Copy 97104 88192">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                        <span>Copy</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Email Block -->
+            <div class="exact-info-block">
+              <div class="exact-icon-circle mail-circle" aria-label="Official Email">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="#0b1329"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div class="exact-content">
+                <span class="exact-content-label">Official Email</span>
+                <div class="exact-email-row">
+                  <a href="mailto:madhaprints@gmail.com" class="exact-email-text">madhaprints@gmail.com</a>
+                  <div class="phone-quick-actions">
+                    <a href="mailto:madhaprints@gmail.com" class="phone-action-btn btn-act-call" title="Send email">
+                      <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                      <span>Send Mail</span>
+                    </a>
+                    <button type="button" class="phone-action-btn btn-act-copy copy-inline-btn" data-copy="madhaprints@gmail.com" title="Copy Email">
+                      <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Store Address Block -->
+            <div class="exact-info-block">
+              <div class="exact-icon-circle pin-circle" aria-label="Store Address">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="#0b1329"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+              </div>
+              <div class="exact-content">
+                <span class="exact-content-label">Store Address</span>
+                <div class="exact-address-text" id="store-exact-address">
+                  No: 4/353, 4th Street,<br>
+                  Dr. Puratchi Thalaivi Main Road,<br>
+                  MGR Nagar, Kottivakkam,<br>
+                  Chennai – 600 041. <strong class="landmark-tag">(Near SRP Tools)</strong>
+                </div>
+                <div class="exact-address-actions">
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=No:+4/353,+4th+Street,+Dr.+Puratchi+Thalaivi+Main+Road,+MGR+Nagar,+Kottivakkam,+Chennai+-+600041" target="_blank" class="exact-btn exact-btn-gold">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M18.27 10.7l-4.97-4.97c-.39-.39-1.02-.39-1.41 0L6.92 10.7a.996.996 0 000 1.41l4.97 4.97c.39.39 1.02.39 1.41 0l4.97-4.97a.996.996 0 000-1.41zm-6.68 3.59V12H9.5v-2h2.09V7.91L14.68 11l-3.09 3.29z"/></svg>
+                    <span>Get Directions</span>
+                  </a>
+                  <button type="button" class="exact-btn exact-btn-ghost" id="btn-copy-exact-address">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                    <span>Copy Address</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Google Map Showcase -->
+          <div class="contact-map-eye-card reveal-right">
+            <div class="map-eye-topbar">
+              <div class="map-eye-title">
+                <span class="map-live-dot"></span>
+                <span>Adha Prints • Kottivakkam Store</span>
+              </div>
+              <a href="https://maps.google.com/?q=No:+4/353,+4th+Street,+Dr.+Puratchi+Thalaivi+Main+Road,+MGR+Nagar,+Kottivakkam,+Chennai+-+600041" target="_blank" class="map-open-link">
+                <span>Open in Google Maps</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+              </a>
+            </div>
+
+            <div class="map-eye-iframe-box">
+              <iframe
+                title="Google Map - Adha Prints Kottivakkam"
+                src="https://maps.google.com/maps?q=No%204%2F353%2C%204th%20Street%2C%20Dr.%20Puratchi%20Thalaivi%20Main%20Road%2C%20MGR%20Nagar%2C%20Kottivakkam%2C%20Chennai%20600041&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+            <div class="map-eye-bottombar">
+              <div class="map-eye-loc-label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="#fbbf24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+                <span><strong>MGR Nagar, Kottivakkam</strong> (Near SRP Tools)</span>
+              </div>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=No:+4/353,+4th+Street,+Dr.+Puratchi+Thalaivi+Main+Road,+MGR+Nagar,+Kottivakkam,+Chennai+-+600041" target="_blank" class="exact-btn exact-btn-gold" style="padding: 7px 16px; font-size: 0.82rem;">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M18.27 10.7l-4.97-4.97c-.39-.39-1.02-.39-1.41 0L6.92 10.7a.996.996 0 000 1.41l4.97 4.97c.39.39 1.02.39 1.41 0l4.97-4.97a.996.996 0 000-1.41zm-6.68 3.59V12H9.5v-2h2.09V7.91L14.68 11l-3.09 3.29z"/></svg>
+                <span>Start Navigation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ FOOTER ═══ -->
-    <footer class="site-footer" id="contact">
+    <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-col brand-col">
           <div class="footer-logo">ADHA<span class="logo-accent"> PRINTS</span></div>
           <p class="footer-desc">Neighbourhood print store delivering high quality offset, digital, and custom print solutions across Chennai.</p>
           <div class="footer-contact">
-            <p>📍 No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai - 600 041</p>
-            <p>📞 <a href="tel:+919790779720">+91 97907 79720</a></p>
+            <p>📍 No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai – 600 041. (Near SRP Tools)</p>
+            <p>📞 <a href="tel:9790779720">97907 79720</a> | <a href="tel:9710488259">97104 88259</a> | <a href="tel:9710488192">97104 88192</a></p>
             <p>✉️ <a href="mailto:madhaprints@gmail.com">madhaprints@gmail.com</a></p>
           </div>
         </div>
@@ -453,79 +1159,40 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#categories">Popular Categories</a></li>
-
+            <li><a href="#contact">Contact & Location</a></li>
             <li><a href="#about">About Our Store</a></li>
             <li><a href="https://wa.me/919790779720" target="_blank">WhatsApp Support</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Store Hours</h4>
-          <p class="hours-text"><strong>Mon - Sat:</strong> 9:00 AM – 8:00 PM</p>
-          <p class="hours-text"><strong>Sunday:</strong> On Call / Appointment</p>
+          <h4>Payment & Support</h4>
+          <p class="hours-text">Instant WhatsApp quotes, file proofing, and fast turnaround.</p>
           <div class="footer-pay-badges">
             <span class="pay-tag">GPay / PhonePe</span>
             <span class="pay-tag">UPI</span>
-            <span class="pay-tag">Cards Accepted</span>
+            <span class="pay-tag">Cash / Online</span>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div class="container bottom-inner">
-          <p>© 2026 Adha Prints. All Rights Reserved. Designed & Developed with Ultra-Premium Quality.</p>
+          <p>© 2026 Adha Prints. All Rights Reserved. Neighbourhood Print Store Kottivakkam Chennai.</p>
           <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑ Top</button>
         </div>
       </div>
     </footer>
 
-    <!-- ═══ FLOATING WHATSAPP BUTTON ═══ -->
-    <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20want%20to%20place%20an%20order." class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span class="floating-tooltip">Need Help? Chat on WhatsApp</span>
-    </a>
-
-    <!-- ═══ MODAL FOR SIGN IN / LOGIN ═══ -->
-    <div class="modal-overlay" id="account-modal">
-      <div class="modal-card">
-        <button class="modal-close" id="account-modal-close">✕</button>
-        <div class="modal-tabs">
-          <button class="modal-tab active" data-tab="login">Login</button>
-          <button class="modal-tab" data-tab="register">Register</button>
-        </div>
-        <div class="modal-tab-content active" id="tab-login">
-          <h3>Welcome Back to Adha Prints</h3>
-          <form onsubmit="event.preventDefault(); alert('Logged in successfully!'); document.getElementById('account-modal').classList.remove('active');">
-            <div class="form-group">
-              <label>Email or Phone Number</label>
-              <input type="text" required placeholder="Enter your email or phone" class="form-input" />
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <input type="password" required placeholder="Enter password" class="form-input" />
-            </div>
-            <button type="submit" class="btn btn-primary full-width-btn">Login to Account</button>
-          </form>
-        </div>
-        <div class="modal-tab-content" id="tab-register">
-          <h3>Create an Account</h3>
-          <form onsubmit="event.preventDefault(); alert('Account created successfully!'); document.getElementById('account-modal').classList.remove('active');">
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" required placeholder="Enter your name" class="form-input" />
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" required placeholder="Enter your email" class="form-input" />
-            </div>
-            <div class="form-group">
-              <label>Mobile Number</label>
-              <input type="tel" required placeholder="Enter phone number" class="form-input" />
-            </div>
-            <button type="submit" class="btn btn-primary full-width-btn">Register Account</button>
-          </form>
-        </div>
-      </div>
+    <!-- ═══ MODERN FLOATING DOCK (WHATSAPP + QUICK QUOTE + TOP) ═══ -->
+    <div class="modern-floating-dock">
+      <button class="dock-quote-btn" id="dock-quote-trigger" aria-label="Request Instant Quote">
+        <span>⚡ Quick Quote</span>
+      </button>
+      <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints%2C%20I%20want%20to%20place%20an%20order." class="dock-whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <div class="dock-ping-ring"></div>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
     </div>
 
     <!-- ═══ MODAL FOR QUICK QUOTE ═══ -->
@@ -551,6 +1218,9 @@
         </form>
       </div>
     </div>
+
+    <!-- ═══ TOAST NOTIFICATION CONTAINER ═══ -->
+    <div class="toast-container" id="toast-container"></div>
 
     <script src="main.js"></script>
   </body>

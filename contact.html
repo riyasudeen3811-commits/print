@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="premium-animations.css">
 </head>
 <body>
 
@@ -63,25 +62,120 @@
     </div>
   </section>
 
-  <!-- Contact Form & Info -->
+  <!-- Contact Form & Numbers & Google Map -->
   <section class="section">
     <div class="container">
-      <div class="grid grid-2">
-        <div style="background: rgba(15, 23, 42, 0.6); padding: 35px; border-radius: 20px; border: 1px solid var(--border-color);">
+
+      <!-- Official Info Cards Grid (Strictly from Image 2) -->
+      <div class="contact-numbers-grid" style="margin-bottom: 45px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <!-- Card 1: Phone Numbers -->
+        <div class="contact-number-card highlight-card" style="border-top: 4px solid #fbbf24;">
+          <div class="contact-card-top">
+            <div class="contact-icon-badge" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #0b1329; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#0b1329"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+            </div>
+            <div class="contact-status-indicator online">
+              <span class="status-pulse-dot"></span>
+              <span>Direct Phone Lines</span>
+            </div>
+          </div>
+          <div class="contact-card-body" style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0;">
+              <a href="tel:9790779720" style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark);">97907 79720</a>
+              <div style="display: flex; gap: 6px;">
+                <a href="tel:9790779720" class="btn btn-primary btn-sm" style="padding: 4px 10px; font-size: 0.75rem;">Call</a>
+                <a href="https://wa.me/919790779720?text=Hi%20Adha%20Prints" target="_blank" class="btn btn-whatsapp btn-sm" style="padding: 4px 10px; font-size: 0.75rem;">WA</a>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0;">
+              <a href="tel:9710488259" style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark);">97104 88259</a>
+              <div style="display: flex; gap: 6px;">
+                <a href="tel:9710488259" class="btn btn-primary btn-sm" style="padding: 4px 10px; font-size: 0.75rem;">Call</a>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0;">
+              <a href="tel:9710488192" style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark);">97104 88192</a>
+              <div style="display: flex; gap: 6px;">
+                <a href="tel:9710488192" class="btn btn-primary btn-sm" style="padding: 4px 10px; font-size: 0.75rem;">Call</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Official Email -->
+        <div class="contact-number-card" style="border-top: 4px solid #3b82f6;">
+          <div class="contact-card-top">
+            <div class="contact-icon-badge" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #0b1329; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#0b1329"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="contact-status-indicator">
+              <span>Official Email</span>
+            </div>
+          </div>
+          <div class="contact-card-body">
+            <span class="contact-card-role" style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Inquiries & Print Files</span>
+            <h3 class="contact-phone-number" style="font-size: 1.18rem; margin: 6px 0 12px 0;">madhaprints@gmail.com</h3>
+            <p class="contact-card-note">Send high-resolution print files, PDF, CDR, or custom specifications.</p>
+          </div>
+          <div class="contact-card-actions">
+            <a href="mailto:madhaprints@gmail.com" class="btn btn-primary btn-sm">
+              <span>✉️ Send Email</span>
+            </a>
+            <button type="button" class="btn btn-outline btn-sm copy-inline-btn" data-copy="madhaprints@gmail.com" title="Copy Email">
+              📋 Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Store Address -->
+        <div class="contact-number-card" style="border-top: 4px solid #10b981;">
+          <div class="contact-card-top">
+            <div class="contact-icon-badge" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #0b1329; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#0b1329"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            </div>
+            <div class="contact-status-indicator">
+              <span>Store Address</span>
+            </div>
+          </div>
+          <div class="contact-card-body">
+            <span class="contact-card-role" style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Kottivakkam, Chennai</span>
+            <p style="font-size: 0.92rem; color: var(--text-dark); line-height: 1.5; margin: 6px 0 12px 0;">
+              No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai – 600 041. <strong style="color: #d97706;">(Near SRP Tools)</strong>
+            </p>
+          </div>
+          <div class="contact-card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=No:+4/353,+4th+Street,+Dr.+Puratchi+Thalaivi+Main+Road,+MGR+Nagar,+Kottivakkam,+Chennai+-+600041" target="_blank" class="btn btn-secondary btn-sm">
+              <span>🚗 Directions</span>
+            </a>
+            <button type="button" class="btn btn-outline btn-sm copy-inline-btn" data-copy="No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai – 600 041. (Near SRP Tools)" title="Copy Address">
+              📋 Copy
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form & Google Map Grid -->
+      <div class="contact-main-grid">
+        <!-- Left: Inquiry Form & Store Information -->
+        <div class="contact-info-card">
           <span class="badge">FAST INQUIRY</span>
-          <h2 style="font-size: 1.8rem; margin: 15px 0 25px 0;">Request an Instant Print Quote</h2>
-          <form id="contactForm" onsubmit="alert('Thank you! Your quote request has been sent to Adha Prints.'); return false;">
-            <div style="margin-bottom: 15px;">
-              <label style="display: block; margin-bottom: 5px; color: var(--text-muted);">Your Full Name</label>
-              <input type="text" required style="width: 100%; padding: 12px 16px; background: rgba(30, 41, 59, 0.8); border: 1px solid var(--border-color); border-radius: 8px; color: #fff;">
+          <h2 style="font-size: 1.8rem; margin: 15px 0 10px 0;">Request an Instant Print Quote</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+            Fill in your details below and our team will get back to you immediately via WhatsApp or phone.
+          </p>
+
+          <form id="contactForm" onsubmit="event.preventDefault(); const n=document.getElementById('cf-name').value; const p=document.getElementById('cf-phone').value; const s=document.getElementById('cf-service').value; const m=document.getElementById('cf-msg').value; const text=`Hi Adha Prints! My name is ${n} (${p}). I need a quote for ${s}. Details: ${m}`; window.open(`https://wa.me/919790779720?text=${encodeURIComponent(text)}`, '_blank');">
+            <div style="margin-bottom: 14px;">
+              <label style="display: block; margin-bottom: 5px; color: var(--text-dark); font-weight: 600; font-size: 0.88rem;">Your Full Name</label>
+              <input type="text" id="cf-name" required placeholder="Enter your full name" style="width: 100%; padding: 12px 16px; background: #f8fafc; border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-dark); font-size: 0.92rem;">
             </div>
-            <div style="margin-bottom: 15px;">
-              <label style="display: block; margin-bottom: 5px; color: var(--text-muted);">Phone Number</label>
-              <input type="tel" required style="width: 100%; padding: 12px 16px; background: rgba(30, 41, 59, 0.8); border: 1px solid var(--border-color); border-radius: 8px; color: #fff;">
+            <div style="margin-bottom: 14px;">
+              <label style="display: block; margin-bottom: 5px; color: var(--text-dark); font-weight: 600; font-size: 0.88rem;">Phone / WhatsApp Number</label>
+              <input type="tel" id="cf-phone" required placeholder="Enter 10-digit mobile number" style="width: 100%; padding: 12px 16px; background: #f8fafc; border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-dark); font-size: 0.92rem;">
             </div>
-            <div style="margin-bottom: 15px;">
-              <label style="display: block; margin-bottom: 5px; color: var(--text-muted);">Select Print Service</label>
-              <select style="width: 100%; padding: 12px 16px; background: rgba(30, 41, 59, 0.8); border: 1px solid var(--border-color); border-radius: 8px; color: #fff;">
+            <div style="margin-bottom: 14px;">
+              <label style="display: block; margin-bottom: 5px; color: var(--text-dark); font-weight: 600; font-size: 0.88rem;">Select Print Service</label>
+              <select id="cf-service" style="width: 100%; padding: 12px 16px; background: #f8fafc; border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-dark); font-size: 0.92rem;">
                 <option>Business Cards (Visiting Cards)</option>
                 <option>Letterheads & Envelopes</option>
                 <option>Brochures & Catalogs</option>
@@ -94,33 +188,69 @@
               </select>
             </div>
             <div style="margin-bottom: 20px;">
-              <label style="display: block; margin-bottom: 5px; color: var(--text-muted);">Job Details & Quantity</label>
-              <textarea rows="4" placeholder="Tell us about paper type, quantity, size or custom finishes..." style="width: 100%; padding: 12px 16px; background: rgba(30, 41, 59, 0.8); border: 1px solid var(--border-color); border-radius: 8px; color: #fff;"></textarea>
+              <label style="display: block; margin-bottom: 5px; color: var(--text-dark); font-weight: 600; font-size: 0.88rem;">Job Details & Quantity</label>
+              <textarea id="cf-msg" rows="3" placeholder="Tell us about paper type, quantity, size or custom finishes..." style="width: 100%; padding: 12px 16px; background: #f8fafc; border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-dark); font-size: 0.92rem;"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-sparkle" style="width: 100%; justify-content: center;">Submit Quote Request</button>
+            <button type="submit" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 12px 20px;">💬 Submit via WhatsApp Quote</button>
           </form>
+
+          <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <span style="font-size: 1.3rem;">📍</span>
+              <div>
+                <strong style="display: block; font-size: 0.9rem; color: var(--text-dark);">Store Address:</strong>
+                <span id="contact-full-address" style="font-size: 0.85rem; color: var(--text-muted);">No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai – 600 041. (Near SRP Tools)</span>
+              </div>
+            </div>
+            <div class="contact-action-buttons" style="margin-top: 8px; margin-bottom: 0;">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=No:+4/353,+4th+Street,+Dr.+Puratchi+Thalaivi+Main+Road,+MGR+Nagar,+Kottivakkam,+Chennai+-+600041" target="_blank" class="btn btn-primary btn-sm">🚗 Turn-by-Turn Directions</a>
+              <button type="button" class="btn btn-outline btn-sm" id="btn-copy-contact-address">📋 Copy Address</button>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <span class="badge">STORE LOCATION</span>
-          <h2 style="font-size: 1.8rem; margin: 15px 0 25px 0;">Visit Adha Prints Kottivakkam</h2>
-          
-          <div style="margin-bottom: 25px; background: rgba(15, 23, 42, 0.4); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
-            <h3 style="margin-bottom: 10px;">📍 Store Address</h3>
-            <p style="color: var(--text-muted); line-height: 1.6;">ECR Main Road, Kottivakkam,<br>Chennai, Tamil Nadu - 600041</p>
+        <!-- Right: Interactive Google Map -->
+        <div class="contact-map-card">
+          <div class="contact-map-header">
+            <div class="map-status-pill">
+              <span class="live-dot-blink"></span>
+              <strong>Adha Prints Kottivakkam Live Location</strong>
+            </div>
+            <a href="https://maps.google.com/?q=No:+4/353,+4th+Street,+Dr.+Puratchi+Thalaivi+Main+Road,+MGR+Nagar,+Kottivakkam,+Chennai+-+600041" target="_blank" class="map-external-link" title="Open full Google Maps">
+              <span>Fullscreen</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
           </div>
 
-          <div style="margin-bottom: 25px; background: rgba(15, 23, 42, 0.4); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
-            <h3 style="margin-bottom: 10px;">📞 Phone & Email</h3>
-            <p style="color: var(--text-muted); line-height: 1.6;">Phone: +91 97907 79720<br>Email: madhaprints@gmail.com</p>
+          <div class="contact-iframe-container">
+            <iframe
+              id="google-map-embed-contact-page"
+              title="Google Maps Location - Adha Prints Kottivakkam"
+              src="https://maps.google.com/maps?q=No%204%2F353%2C%204th%20Street%2C%20Dr.%20Puratchi%20Thalaivi%20Main%20Road%2C%20MGR%20Nagar%2C%20Kottivakkam%2C%20Chennai%20600041&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
 
-          <div style="background: rgba(15, 23, 42, 0.4); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
-            <h3 style="margin-bottom: 10px;">🕒 Working Hours</h3>
-            <p style="color: var(--text-muted); line-height: 1.6;">Monday – Saturday: 9:00 AM – 9:00 PM<br>Sunday: 10:00 AM – 2:00 PM</p>
+          <div class="contact-map-footer">
+            <div class="map-pin-info">
+              <span class="map-pin-icon">📍</span>
+              <div>
+                <span class="map-store-name">Adha Prints Chennai</span>
+                <span class="map-store-sub">Dr. Puratchi Thalaivi Main Rd, Kottivakkam</span>
+              </div>
+            </div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=No:+4/353,+4th+Street,+Dr.+Puratchi+Thalaivi+Main+Road,+MGR+Nagar,+Kottivakkam,+Chennai+-+600041" target="_blank" class="btn btn-primary btn-sm nav-btn">
+              🚗 Start Navigation
+            </a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -163,10 +293,9 @@
       </div>
       <div class="footer-col">
         <h4>Store Info</h4>
-        <p>📍 ECR Main Road, Kottivakkam, Chennai - 600041</p>
-        <p>📞 Phone: +91 97907 79720</p>
-        <p>✉️ Email: madhaprints@gmail.com</p>
-        <p>🕒 Mon - Sat: 9 AM - 9 PM</p>
+        <p>📍 No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai – 600 041. (Near SRP Tools)</p>
+        <p>📞 <a href="tel:9790779720">97907 79720</a> | <a href="tel:9710488259">97104 88259</a> | <a href="tel:9710488192">97104 88192</a></p>
+        <p>✉️ <a href="mailto:madhaprints@gmail.com">madhaprints@gmail.com</a></p>
       </div>
     </div>
     <div class="footer-bottom">

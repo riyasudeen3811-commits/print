@@ -271,25 +271,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ═══ 6. BEFORE / AFTER COMPARISON SLIDER ═══ */
+  /* ═══ 6. BEFORE / AFTER COMPARISON SLIDER & SAMPLE SWITCHER ═══ */
   const comp = document.getElementById('comparison');
   const compBefore = document.getElementById('comparison-before');
   const compSlider = document.getElementById('comparison-slider');
+  const compImgBefore = document.getElementById('comp-img-before');
+  const compImgAfter = document.getElementById('comp-img-after');
+
   if (comp && compBefore && compSlider) {
     let dragging = false;
-    const update = x => {
-      const r = comp.getBoundingClientRect();
-      let p = (x - r.left) / r.width;
+    const setPercent = p => {
       p = Math.max(0.05, Math.min(0.95, p));
       compBefore.style.width = (p * 100) + '%';
       compSlider.style.left = (p * 100) + '%';
     };
+    const update = x => {
+      const r = comp.getBoundingClientRect();
+      setPercent((x - r.left) / r.width);
+    };
+
     comp.addEventListener('mousedown', e => { dragging = true; update(e.clientX); });
     window.addEventListener('mouseup', () => dragging = false);
     comp.addEventListener('mousemove', e => { if (dragging) update(e.clientX); });
     comp.addEventListener('touchstart', () => dragging = true);
     window.addEventListener('touchend', () => dragging = false);
     comp.addEventListener('touchmove', e => { if (dragging && e.touches[0]) update(e.touches[0].clientX); });
+
+    // Comparison Presets Buttons (10%, 50%, 90%)
+    document.querySelectorAll('.comp-preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.comp-preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const pos = parseFloat(btn.dataset.pos || '50') / 100;
+        setPercent(pos);
+      });
+    });
+
+    // Sample Product Switcher
+    document.querySelectorAll('.sample-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.sample-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const beforeImg = btn.dataset.before;
+        const afterImg = btn.dataset.after;
+        if (beforeImg && compImgBefore) compImgBefore.src = beforeImg;
+        if (afterImg && compImgAfter) compImgAfter.src = afterImg;
+      });
+    });
   }
 
   /* ═══ 7. SCROLL REVEAL OBSERVER ═══ */
