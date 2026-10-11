@@ -739,7 +739,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-marquee-track {
   display: flex;
   width: max-content;
-  animation: heroMarqueeScroll 28s linear infinite;
+  animation: heroMarqueeScroll 34s linear infinite;
 }
 
 .hero-services-marquee:hover .hero-marquee-track {
@@ -783,6 +783,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .m-icon {
   font-size: 1.15rem;
+}
+
+.m-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #fbbf24;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+  display: inline-block;
 }
 
 .m-label {

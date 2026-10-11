@@ -9,6 +9,13 @@ const products = [
   { id:'flyers', title:'Flyers & Pamphlets', category:'marketing', tag:'⚡ 24h Express', desc:'Promotional flyers, leaflets & handbills for corporate events & marketing.', img:'flyers.jpg' },
   { id:'invitations', title:'Invitations & Greeting Cards', category:'events', tag:'Specialty', desc:'Wedding cards, event invitations & greeting cards with foil embossing.', img:'invitations.jpg' },
   { id:'stickers', title:'Custom Stickers & Labels', category:'events', tag:'Waterproof', desc:'Art paper, Glossy, Synthetic, Waterproof Vinyl & Die-Cut product labels.', img:'stickers.jpg' },
+  { id:'gifts-banner-strip', title:'Mugs, Tiles, Pillows & Tees', category:'gifts', tag:'🎁 Official Banner', desc:'Mug Printing, Tiles Printing, Cap Printing, Pillow Cover Printing & T-Shirt Printing.', img:'custom-gifts-banner.png' },
+  { id:'merchandise-showcase', title:'Personalized Gifts & Apparel', category:'gifts', tag:'✨ Full Collection', desc:'Custom printed ceramic coffee mugs, corporate t-shirts, caps, photo cushions & glossy ceramic tiles.', img:'custom-merchandise-showcase.jpg' },
+  { id:'mug-printing', title:'Custom Mug Printing', category:'gifts', tag:'🔥 Personalized', desc:'Ceramic photo mugs, magic color-change mugs & corporate logo branded coffee mugs.', img:'mug-printing.jpg' },
+  { id:'tshirt-printing', title:'Custom T-Shirt Printing', category:'gifts', tag:'Trending', desc:'Premium cotton round-neck, polo t-shirts & event uniforms with vibrant DTF & screen print.', img:'tshirt-printing.jpg' },
+  { id:'cap-printing', title:'Custom Cap Printing', category:'gifts', tag:'Popular', desc:'Branded baseball caps, trucker hats & promotional event caps with embroidery & print.', img:'cap-printing.jpg' },
+  { id:'pillow-cover', title:'Pillow Cover & Cushion Printing', category:'gifts', tag:'Gift Choice', desc:'Personalized photo cushions, decorative velvet throw pillows & satin pillow cover printing.', img:'pillow-cover.jpg' },
+  { id:'tiles-printing', title:'Ceramic Tiles Photo Printing', category:'gifts', tag:'Art Keepsake', desc:'High-gloss ceramic photo tiles, family portraits & commemorative wall/tabletop tiles.', img:'tiles-printing.jpg' },
   { id:'id-cards', title:'ID Cards & Lanyards', category:'corporate', tag:'High Security', desc:'PVC employee ID cards, student badges & custom printed satin lanyards.', img:'id-cards.jpg' },
   { id:'offset-printing', title:'Offset & Flex Signage', category:'custom', tag:'Bulk Master', desc:'Large-format flex banners, star flex, standees & offset commercial printing.', img:'offset-printing.jpg' },
   { id:'binding', title:'Book & Thesis Binding', category:'custom', tag:'Professional', desc:'Spiral, wire-o, softcover & hardcover thesis book binding with golden foil text.', img:'binding.jpg' }
@@ -16,6 +23,7 @@ const products = [
 
 const popularCategories = [
   { title:'Visiting Cards', desc:'Art, Matte, Velvet, Spot UV & Metallic Foil', count:'12+ Options', img:'business-cards.jpg', filter:'corporate' },
+  { title:'Mugs & T-Shirts', desc:'Custom Sublimation Mugs, Tees, Caps & Pillows', count:'15+ Options', img:'mug-printing.jpg', filter:'custom' },
   { title:'Stickers & Labels', desc:'Waterproof Vinyl, Synthetic & Die-Cut', count:'10+ Options', img:'stickers.jpg', filter:'events' },
   { title:'Brochures & Flyers', desc:'Bi-fold, Tri-fold & Promotional Leaflets', count:'8+ Options', img:'brochures.jpg', filter:'marketing' },
   { title:'Flex & Signage', desc:'Star Flex, Standees & Foam Board', count:'6+ Options', img:'offset-printing.jpg', filter:'custom' },
@@ -25,7 +33,12 @@ const popularCategories = [
 
 const typingKeywords = [
   "Visiting cards",
+  "Custom Mug Printing",
+  "T-Shirt Printing",
   "Custom Stickers",
+  "Cap Printing",
+  "Pillow Cover Printing",
+  "Photo Tiles Printing",
   "Brochures & Pamphlets",
   "PVC ID Cards",
   "Flex Banners",
@@ -149,9 +162,9 @@ document.addEventListener('DOMContentLoaded', () => {
       productsGrid.style.transform = 'none';
       productsGrid.innerHTML = filtered.map(p => `
         <div class="product-card visible" data-id="${p.id}">
-          <div class="product-card-image">
-            <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" />
-            <span class="product-tag">${p.tag}</span>
+          <div class="product-card-image" ${p.img === 'custom-gifts-banner.png' ? 'style="background:#0f172a;display:flex;align-items:center;justify-content:center;padding:12px;"' : ''}>
+            <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" ${p.img === 'custom-gifts-banner.png' ? 'style="object-fit:contain;width:100%;height:100%;"' : ''} />
+            <span class="product-tag" ${p.tag.includes('Collection') || p.tag.includes('Banner') ? 'style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;"' : ''}>${p.tag}</span>
             <div class="card-shine"></div>
           </div>
           <div class="product-card-body">
@@ -168,10 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update Marquee Banner Cards
     const cardHTML = filtered.map(p => `
-      <div class="featured-card">
-        <div class="featured-card-img">
-          <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" />
-          <span class="featured-badge">${p.tag}</span>
+      <div class="featured-card" ${p.img === 'custom-gifts-banner.png' ? 'style="width:320px;"' : ''}>
+        <div class="featured-card-img" ${p.img === 'custom-gifts-banner.png' ? 'style="background:#0f172a;display:flex;align-items:center;justify-content:center;padding:10px;"' : ''}>
+          <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" ${p.img === 'custom-gifts-banner.png' ? 'style="object-fit:contain;width:100%;height:100%;"' : ''} />
+          <span class="featured-badge" ${p.tag.includes('Collection') || p.tag.includes('Banner') ? 'style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;"' : ''}>${p.tag}</span>
         </div>
         <div class="featured-card-content">
           <h4>${p.title}</h4>
