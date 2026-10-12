@@ -15,7 +15,8 @@ const products = [
   { id:'pillow-cover', title:'Pillow Cover & Cushion Printing', category:'gifts', tag:'Gift Choice', desc:'Personalized photo cushions, decorative velvet throw pillows & satin pillow cover printing.', img:'pillow-cover.jpg' },
   { id:'tiles-printing', title:'Ceramic Tiles Photo Printing', category:'gifts', tag:'Art Keepsake', desc:'High-gloss ceramic photo tiles, family portraits & commemorative wall/tabletop tiles.', img:'tiles-printing.jpg' },
   { id:'id-cards', title:'ID Cards & Lanyards', category:'corporate', tag:'High Security', desc:'PVC employee ID cards, student badges & custom printed satin lanyards.', img:'id-cards.jpg' },
-  { id:'offset-printing', title:'Offset & Flex Signage', category:'custom', tag:'Bulk Master', desc:'Large-format flex banners, star flex, standees & offset commercial printing.', img:'offset-printing.jpg' },
+  { id:'offset-printing', title:'Offset Printing', category:'custom', tag:'Bulk Master', desc:'High-volume commercial offset printing for bulk brochures, flyers, books & publications.', img:'offset-printing.jpg' },
+  { id:'flex-printing', title:'Flex Banners & Signage', category:'custom', tag:'Large Format', desc:'Frontlit & backlit star flex, roll-up standees, foam board & promotional banners.', img:'flex-printing.jpg' },
   { id:'binding', title:'Book & Thesis Binding', category:'custom', tag:'Professional', desc:'Spiral, wire-o, softcover & hardcover thesis book binding with golden foil text.', img:'binding.jpg' }
 ];
 
@@ -24,7 +25,7 @@ const popularCategories = [
   { title:'Mugs & T-Shirts', desc:'Custom Sublimation Mugs, Tees, Caps & Pillows', count:'15+ Options', img:'mug-printing.jpg', filter:'custom' },
   { title:'Stickers & Labels', desc:'Waterproof Vinyl, Synthetic & Die-Cut', count:'10+ Options', img:'stickers.jpg', filter:'events' },
   { title:'Brochures & Flyers', desc:'Bi-fold, Tri-fold & Promotional Leaflets', count:'8+ Options', img:'brochures.jpg', filter:'marketing' },
-  { title:'Flex & Signage', desc:'Star Flex, Standees & Foam Board', count:'6+ Options', img:'offset-printing.jpg', filter:'custom' },
+  { title:'Flex & Signage', desc:'Star Flex, Standees & Foam Board', count:'6+ Options', img:'flex-printing.jpg', filter:'custom' },
   { title:'ID Cards & Lanyards', desc:'PVC Cards & Custom Satin Lanyards', count:'5+ Options', img:'id-cards.jpg', filter:'corporate' },
   { title:'Thesis Book Binding', desc:'Hardcover, Softcover & Golden Foil Text', count:'7+ Options', img:'binding.jpg', filter:'custom' }
 ];
