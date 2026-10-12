@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════════════
-   ADHA PRINTS — Ultra-Premium Engine (Inspired by theprintguy24.com)
+   MADHA PRINTS — Ultra-Premium Engine (Inspired by theprintguy24.com)
    ══════════════════════════════════════════════════════════════════ */
 
 const products = [
@@ -9,8 +9,6 @@ const products = [
   { id:'flyers', title:'Flyers & Pamphlets', category:'marketing', tag:'⚡ 24h Express', desc:'Promotional flyers, leaflets & handbills for corporate events & marketing.', img:'flyers.jpg' },
   { id:'invitations', title:'Invitations & Greeting Cards', category:'events', tag:'Specialty', desc:'Wedding cards, event invitations & greeting cards with foil embossing.', img:'invitations.jpg' },
   { id:'stickers', title:'Custom Stickers & Labels', category:'events', tag:'Waterproof', desc:'Art paper, Glossy, Synthetic, Waterproof Vinyl & Die-Cut product labels.', img:'stickers.jpg' },
-  { id:'gifts-banner-strip', title:'Mugs, Tiles, Pillows & Tees', category:'gifts', tag:'🎁 Official Banner', desc:'Mug Printing, Tiles Printing, Cap Printing, Pillow Cover Printing & T-Shirt Printing.', img:'custom-gifts-banner.png' },
-  { id:'merchandise-showcase', title:'Personalized Gifts & Apparel', category:'gifts', tag:'✨ Full Collection', desc:'Custom printed ceramic coffee mugs, corporate t-shirts, caps, photo cushions & glossy ceramic tiles.', img:'custom-merchandise-showcase.jpg' },
   { id:'mug-printing', title:'Custom Mug Printing', category:'gifts', tag:'🔥 Personalized', desc:'Ceramic photo mugs, magic color-change mugs & corporate logo branded coffee mugs.', img:'mug-printing.jpg' },
   { id:'tshirt-printing', title:'Custom T-Shirt Printing', category:'gifts', tag:'Trending', desc:'Premium cotton round-neck, polo t-shirts & event uniforms with vibrant DTF & screen print.', img:'tshirt-printing.jpg' },
   { id:'cap-printing', title:'Custom Cap Printing', category:'gifts', tag:'Popular', desc:'Branded baseball caps, trucker hats & promotional event caps with embroidery & print.', img:'cap-printing.jpg' },
@@ -162,9 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
       productsGrid.style.transform = 'none';
       productsGrid.innerHTML = filtered.map(p => `
         <div class="product-card visible" data-id="${p.id}">
-          <div class="product-card-image" ${p.img === 'custom-gifts-banner.png' ? 'style="background:#0f172a;display:flex;align-items:center;justify-content:center;padding:12px;"' : ''}>
-            <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" ${p.img === 'custom-gifts-banner.png' ? 'style="object-fit:contain;width:100%;height:100%;"' : ''} />
-            <span class="product-tag" ${p.tag.includes('Collection') || p.tag.includes('Banner') ? 'style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;"' : ''}>${p.tag}</span>
+          <div class="product-card-image">
+            <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" />
+            <span class="product-tag" ${p.tag.includes('Collection') ? 'style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;"' : ''}>${p.tag}</span>
             <div class="card-shine"></div>
           </div>
           <div class="product-card-body">
@@ -181,10 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update Marquee Banner Cards
     const cardHTML = filtered.map(p => `
-      <div class="featured-card" ${p.img === 'custom-gifts-banner.png' ? 'style="width:320px;"' : ''}>
-        <div class="featured-card-img" ${p.img === 'custom-gifts-banner.png' ? 'style="background:#0f172a;display:flex;align-items:center;justify-content:center;padding:10px;"' : ''}>
-          <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" ${p.img === 'custom-gifts-banner.png' ? 'style="object-fit:contain;width:100%;height:100%;"' : ''} />
-          <span class="featured-badge" ${p.tag.includes('Collection') || p.tag.includes('Banner') ? 'style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;"' : ''}>${p.tag}</span>
+      <div class="featured-card">
+        <div class="featured-card-img">
+          <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" />
+          <span class="featured-badge" ${p.tag.includes('Collection') ? 'style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;"' : ''}>${p.tag}</span>
         </div>
         <div class="featured-card-content">
           <h4>${p.title}</h4>
@@ -218,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const p = calcProd ? calcProd.value : 'Business Cards';
     const q = calcQty ? calcQty.value : '500 Units';
     const f = calcFinish ? calcFinish.value : 'Matte Lamination';
-    const msg = `Hi Adha Prints, I want a quotation for ${p}, Quantity: ${q}, Finish: ${f}. Please guide me with pricing.`;
+    const msg = `Hi Madha Prints, I want a quotation for ${p}, Quantity: ${q}, Finish: ${f}. Please guide me with pricing.`;
     calcBtn.href = `https://wa.me/919790779720?text=${encodeURIComponent(msg)}`;
   }
   if (calcProd) calcProd.addEventListener('change', updateCalcUrl);
@@ -254,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const n = document.getElementById('modal-name')?.value || '';
       const p = document.getElementById('modal-phone')?.value || '';
       const r = modalReq?.value || '';
-      const text = `Hi Adha Prints, my name is ${n} (${p}). I need a quote for: ${r}.`;
+      const text = `Hi Madha Prints, my name is ${n} (${p}). I need a quote for: ${r}.`;
       window.open(`https://wa.me/919790779720?text=${encodeURIComponent(text)}`, '_blank');
       quoteModal?.classList.remove('active');
     });

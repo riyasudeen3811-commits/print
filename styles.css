@@ -1,11 +1,11 @@
 /* ==========================================================================
-   ADHA PRINTS — COMPLETE UNIFIED MASTER STYLESHEET
+   MADHA PRINTS — COMPLETE UNIFIED MASTER STYLESHEET
    ========================================================================== */
 
 /* ═══ SECTION: css/variables.css ═══ */
 
 /* ══════════════════════════════════════════════════════════════════
-   ADHA PRINTS — Inspired by theprintguy24.com (Ultra-Premium Theme)
+   MADHA PRINTS — Inspired by theprintguy24.com (Ultra-Premium Theme)
    ══════════════════════════════════════════════════════════════════ */
 
 :root {
@@ -892,6 +892,112 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ═══ HERO WORDING OVERLAY ═══ */
+.hero-wording-overlay {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.hero-wording-card {
+  pointer-events: auto;
+  max-width: 860px;
+  width: 100%;
+  background: rgba(11, 15, 25, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 20px 32px;
+  text-align: center;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  animation: heroCardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes heroCardEntrance {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-wording-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(217, 119, 6, 0.32));
+  border: 1px solid rgba(245, 158, 11, 0.55);
+  color: #fbbf24;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.hero-wording-title {
+  color: #ffffff;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.hero-wording-title .highlight {
+  color: #38bdf8;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-wording-subtitle {
+  color: #cbd5e1;
+  font-size: clamp(0.85rem, 1.4vw, 1rem);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-wording-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-wording-btns .btn {
+  padding: 9px 22px;
+  font-size: 0.88rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .hero-wording-overlay {
+    position: relative;
+    top: 0;
+    padding: 16px;
+    background: #0b0f19;
+  }
+  .hero-wording-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+  .hero-wording-subtitle {
+    font-size: 0.82rem;
+    margin-bottom: 12px;
+  }
+}
+
 
 /* ═══ SECTION: css/categories.css ═══ */
 
@@ -1387,7 +1493,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #2563eb;
 }
 
-/* ═══ ADHA PRINTS BRANDED TRANSFORMATION SECTION ENHANCEMENTS ═══ */
+/* ═══ MADHA PRINTS BRANDED TRANSFORMATION SECTION ENHANCEMENTS ═══ */
 .brand-pill-badge {
   display: inline-flex;
   align-items: center;
@@ -2474,7 +2580,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ══════════════════════════════════════════════════════════════════
-   ADHA PRINTS — Ultra-Responsive Mobile & Tablet CSS Suite
+   MADHA PRINTS — Ultra-Responsive Mobile & Tablet CSS Suite
    ══════════════════════════════════════════════════════════════════ */
 
 /* Global Overflow Protection */
@@ -2642,7 +2748,7 @@ html, body {
 /* ═══ SECTION: premium-animations.css ═══ */
 
 /* ══════════════════════════════════════════════════════════════════
-   ADHA PRINTS — Ultra-Premium 2026/2027 Creative & Trending Animation Layer
+   MADHA PRINTS — Ultra-Premium 2026/2027 Creative & Trending Animation Layer
    ══════════════════════════════════════════════════════════════════ */
 
 /* ─── Modern Theme Variables ─── */
