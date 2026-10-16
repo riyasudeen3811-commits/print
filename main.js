@@ -3,46 +3,91 @@
    ══════════════════════════════════════════════════════════════════ */
 
 const products = [
-  { id:'business-cards', title:'Business Cards (Visiting Cards)', category:'corporate', tag:'⭐ Bestseller', desc:'Art, Matte, Velvet Soft Touch, Gold Foil Stamping, Spot UV & Metallic cards.', img:'business-cards.jpg' },
-  { id:'letterheads', title:'Letterheads & Envelopes', category:'corporate', tag:'Corporate', desc:'Executive letterheads & branded envelopes on 100 GSM sunshine paper stock.', img:'letterheads.jpg' },
-  { id:'brochures', title:'Brochures & Catalogs', category:'marketing', tag:'🔥 Popular', desc:'Bi-fold, tri-fold & multi-page brochures with vibrant CMYK color fidelity.', img:'brochures.jpg' },
-  { id:'flyers', title:'Flyers & Pamphlets', category:'marketing', tag:'⚡ 24h Express', desc:'Promotional flyers, leaflets & handbills for corporate events & marketing.', img:'flyers.jpg' },
-  { id:'invitations', title:'Invitations & Greeting Cards', category:'events', tag:'Specialty', desc:'Wedding cards, event invitations & greeting cards with foil embossing.', img:'invitations.jpg' },
-  { id:'stickers', title:'Custom Stickers & Labels', category:'events', tag:'Waterproof', desc:'Art paper, Glossy, Synthetic, Waterproof Vinyl & Die-Cut product labels.', img:'stickers.jpg' },
-  { id:'mug-printing', title:'Custom Mug Printing', category:'gifts', tag:'🔥 Personalized', desc:'Ceramic photo mugs, magic color-change mugs & corporate logo branded coffee mugs.', img:'mug-printing.jpg' },
-  { id:'tshirt-printing', title:'Custom T-Shirt Printing', category:'gifts', tag:'Trending', desc:'Premium cotton round-neck, polo t-shirts & event uniforms with vibrant DTF & screen print.', img:'tshirt-printing.jpg' },
-  { id:'cap-printing', title:'Custom Cap Printing', category:'gifts', tag:'Popular', desc:'Branded baseball caps, trucker hats & promotional event caps with embroidery & print.', img:'cap-printing.jpg' },
-  { id:'pillow-cover', title:'Pillow Cover & Cushion Printing', category:'gifts', tag:'Gift Choice', desc:'Personalized photo cushions, decorative velvet throw pillows & satin pillow cover printing.', img:'pillow-cover.jpg' },
-  { id:'tiles-printing', title:'Ceramic Tiles Photo Printing', category:'gifts', tag:'Art Keepsake', desc:'High-gloss ceramic photo tiles, family portraits & commemorative wall/tabletop tiles.', img:'tiles-printing.jpg' },
-  { id:'id-cards', title:'ID Cards & Lanyards', category:'corporate', tag:'High Security', desc:'PVC employee ID cards, student badges & custom printed satin lanyards.', img:'id-cards.jpg' },
-  { id:'offset-printing', title:'Offset Printing', category:'custom', tag:'Bulk Master', desc:'High-volume commercial offset printing for bulk brochures, flyers, books & publications.', img:'offset-printing.jpg' },
-  { id:'flex-printing', title:'Flex Banners & Signage', category:'custom', tag:'Large Format', desc:'Frontlit & backlit star flex, roll-up standees, foam board & promotional banners.', img:'flex-printing.jpg' },
-  { id:'binding', title:'Book & Thesis Binding', category:'custom', tag:'Professional', desc:'Spiral, wire-o, softcover & hardcover thesis book binding with golden foil text.', img:'binding.jpg' }
+  // Category 1: Offset Printing
+  { id:'offset-letterpad', title:'Letter Pad', category:'offset', tag:'🖨️ Offset', desc:'Professional corporate letter pads and executive stationery on premium paper stocks.', img:'letterheads.jpg' },
+  { id:'offset-brooches', title:'Brooches & Lapel Pins', category:'offset', tag:'🖨️ Offset / Metal', desc:'Custom printed metal lapel pins, event brooches, and badge buttons with vibrant offset colors.', img:'brooches-pins.jpg' },
+  { id:'offset-vouchers', title:'Vouchers & Receipts', category:'offset', tag:'🖨️ Offset / Perforated', desc:'Custom corporate gift vouchers, payment vouchers, and discount coupon books with serial numbering.', img:'bill-books.jpg' },
+  { id:'offset-billbooks', title:'All Bill Books', category:'offset', tag:'⭐ Essential', desc:'GST tax invoices, delivery challans, estimate books, and day books with carbonless copies.', img:'bill-books.jpg' },
+  { id:'offset-envelopes', title:'Envelop Cover Printing', category:'offset', tag:'🖨️ Stationery', desc:'Standard and custom-sized business envelope printing with window and peel-and-seal gumming.', img:'envelopes.jpg' },
+  { id:'offset-invitations', title:'All Invitations', category:'offset', tag:'👑 Luxury', desc:'Wedding invitations, corporate celebration invites, and ceremony cards with offset detailing.', img:'invitations.jpg' },
+
+  // Category 2: Screen Printing
+  { id:'screen-bags', title:'Bag Printing', category:'screen', tag:'🎨 Screen Print', desc:'Custom screen-printed carry bags, tote bags, and shopping bags with bold, long-lasting prints.', img:'printed-bags.jpg' },
+  { id:'screen-invitations', title:'Screen Printed Invitations', category:'screen', tag:'🎨 Handcrafted', desc:'Invitations screen-printed with metallic inks, textured finishes, and traditional aesthetics.', img:'invitations.jpg' },
+
+  // Category 3: Digital Printing
+  { id:'digital-visiting-cards', title:'Visiting Cards', category:'digital', tag:'⭐ Bestseller', desc:'Premium business visiting cards on 350+ GSM art card, matte velvet lamination, and spot UV.', img:'business-cards.jpg' },
+  { id:'digital-foil-cards', title:'Gold & Silver Foil Visiting Cards', category:'digital', tag:'✨ Luxury Foil', desc:'Metallic gold and silver foil stamped business cards with tactile embossed detailing.', img:'foil-visiting-cards.jpg' },
+  { id:'digital-invitations', title:'Digital Invitations', category:'digital', tag:'⚡ Express', desc:'Express digital color invitation printing for urgent parties, weddings, and corporate meetups.', img:'invitations.jpg' },
+  { id:'digital-letterpad', title:'Digital Letter Pad', category:'digital', tag:'⚡ Digital', desc:'Short-run on-demand digital letterhead and memo pad printing with sharp color consistency.', img:'letterheads.jpg' },
+  { id:'digital-brooches', title:'Digital Brooches', category:'digital', tag:'📌 Badges', desc:'High-resolution full-color digitally printed brooches and pin badges with glossy protective finish.', img:'brooches-pins.jpg' },
+  { id:'digital-id-cards', title:'ID Card', category:'digital', tag:'🪪 High Security', desc:'Corporate employee and student ID cards with high-definition photo, barcodes, and QR codes.', img:'id-cards.jpg' },
+  { id:'digital-lanyards', title:'ID Card Rope Printing', category:'digital', tag:'🎀 Branded', desc:'Custom printed satin and polyester neck lanyards/ropes with company logo and swivel hooks.', img:'lanyard-rope.jpg' },
+  { id:'digital-pvc-cards', title:'PVC Cards', category:'digital', tag:'💎 Smart Plastic', desc:'Heavy-duty PVC plastic cards for privilege clubs, loyalty rewards, gym passes, and RFID cards.', img:'pvc-cards.jpg' },
+  { id:'digital-metallic-stickers', title:'Sticker Sheet Printing (Gold, Silver, Transparent)', category:'digital', tag:'🏷️ Waterproof', desc:'Premium metallic gold, silver chrome, and clear transparent waterproof vinyl sticker sheets.', img:'metallic-stickers.jpg' },
+
+  // Category 4: Sublimation Printing
+  { id:'sublimation-mug', title:'(Personalised) Mug', category:'sublimation', tag:'🔥 Personalized', desc:'Custom ceramic photo mugs, magic heat-reveal mugs, two-tone mugs, and corporate drinkware.', img:'mug-printing.jpg' },
+  { id:'sublimation-keychain', title:'Key Chain', category:'sublimation', tag:'🔑 Custom Shapes', desc:'Personalized sublimation printed key chains in metal, acrylic, and MDF with dual-sided photos.', img:'keychains.jpg' },
+  { id:'sublimation-tshirt', title:'T.Shirt (Sublimation / DTF Printing)', category:'sublimation', tag:'👕 Trending', desc:'Vibrant full-color sublimation and DTF printed round-neck and polo t-shirts for teams and events.', img:'tshirt-printing.jpg' },
+  { id:'sublimation-flags', title:'Flags', category:'sublimation', tag:'🚩 Corporate', desc:'Custom printed corporate desk table flags with chrome stands and outdoor feather flags.', img:'flags.jpg' },
+  { id:'sublimation-pillow', title:'Pillow', category:'sublimation', tag:'🛋️ Keepsake', desc:'Personalized photo cushions, memory pillows, and custom home decor cushion covers.', img:'pillow-cover.jpg' },
+  { id:'sublimation-id-400', title:'ID Card 400 GSM', category:'sublimation', tag:'🪪 Heavy Duty', desc:'Ultra-stout 400 GSM heavy-duty laminated sublimation ID cards offering superior rigidity.', img:'pvc-cards.jpg' },
+
+  // Category 5: Sticker Digital Cutting
+  { id:'digital-sticker-cutting', title:'Sticker Digital Cutting (Customized 13x19)', category:'digital', tag:'✂️ Plotter 13×19', desc:'Precision computerized plotter die-cutting on 13×19 sticker sheets in any custom shape.', img:'sticker-cutting.jpg' },
+
+  // Category 6: Photo Print
+  { id:'photo-passport', title:'Pass Port Size Photo', category:'photo', tag:'📸 6 Colour Studio', desc:'Express biometric passport size, visa size, and stamp size photo prints with studio lighting.', img:'passport-photos.jpg' },
+  { id:'photo-frames', title:'Photo Frame – All Size', category:'photo', tag:'🖼️ All Sizes', desc:'Premium wooden and acrylic photo frames in all standard and custom dimensions with 6-colour prints.', img:'photo-frames.jpg' },
+
+  // Category 7: Banner Printing & Signage
+  { id:'banner-flex', title:'Banner Printing', category:'signage', tag:'🪧 Large Format', desc:'Heavy-duty outdoor flex banner printing for storefront promotions, road shows, and events.', img:'flex-printing.jpg' },
+  { id:'banner-backlight', title:'Back Light & Front Light', category:'signage', tag:'💡 Illuminated', desc:'Backlit flex for glow sign boxes and opaque frontlit flex banners for illuminated shop fascias.', img:'backlight-boards.jpg' },
+  { id:'banner-led', title:'LED Boards', category:'signage', tag:'💡 3D Acrylic', desc:'Bright acrylic 3D LED channel letters, programmable LED moving message displays, and neon signs.', img:'led-boards.jpg' },
+  { id:'banner-standee', title:'Standing Board', category:'signage', tag:'🧍 Roll-up Standee', desc:'Portable aluminum roll-up standees, easel display boards, and outdoor standing signage.', img:'standing-boards.jpg' },
+  { id:'banner-foamboard', title:'Foam Board printing', category:'signage', tag:'🪟 Sunboard', desc:'Direct printed lightweight rigid foam board (sunboard) for exhibition booths and menu boards.', img:'foam-board.jpg' },
+  { id:'banner-uv', title:'UV Printing', category:'signage', tag:'🔮 Flatbed Direct', desc:'Flatbed UV direct ink printing on acrylic, ceramic tiles, wood, glass, metal, and composite sheets.', img:'uv-printing.jpg' },
+
+  // Category 8: Binding
+  { id:'binding-spiral', title:'Spiral Binding', category:'binding', tag:'🔗 Wire-O', desc:'Flexible plastic spiral and metal wire-o coil binding with transparent acetate protective covers.', img:'spiral-binding.jpg' },
+  { id:'binding-soft', title:'Soft Binding', category:'binding', tag:'📕 Perfect Bound', desc:'Clean, professional thermal soft cover binding for manuals, company portfolios, and reports.', img:'soft-binding.jpg' },
+  { id:'binding-hard', title:'Hard Binding', category:'binding', tag:'📗 Gold Embossed', desc:'Deluxe rexine hardcover book binding with embossed gold foil lettering on face and spine.', img:'hard-binding.jpg' },
+  { id:'binding-project', title:'Project Binding', category:'binding', tag:'📚 College Viva', desc:'Student project report and degree thesis binding strictly meeting university standards.', img:'project-binding.jpg' },
+
+  // Category 9: Designing
+  { id:'designing-studio', title:'Designing', category:'designing', tag:'🎨 Creative Studio', desc:'Professional graphic designing for logos, business cards, banners, invitations, and packaging.', img:'graphic-design.jpg' }
 ];
 
 const popularCategories = [
-  { title:'Visiting Cards', desc:'Art, Matte, Velvet, Spot UV & Metallic Foil', count:'12+ Options', img:'business-cards.jpg', filter:'corporate' },
-  { title:'Mugs & T-Shirts', desc:'Custom Sublimation Mugs, Tees, Caps & Pillows', count:'15+ Options', img:'mug-printing.jpg', filter:'custom' },
-  { title:'Stickers & Labels', desc:'Waterproof Vinyl, Synthetic & Die-Cut', count:'10+ Options', img:'stickers.jpg', filter:'events' },
-  { title:'Brochures & Flyers', desc:'Bi-fold, Tri-fold & Promotional Leaflets', count:'8+ Options', img:'brochures.jpg', filter:'marketing' },
-  { title:'Flex & Signage', desc:'Star Flex, Standees & Foam Board', count:'6+ Options', img:'flex-printing.jpg', filter:'custom' },
-  { title:'ID Cards & Lanyards', desc:'PVC Cards & Custom Satin Lanyards', count:'5+ Options', img:'id-cards.jpg', filter:'corporate' },
-  { title:'Thesis Book Binding', desc:'Hardcover, Softcover & Golden Foil Text', count:'7+ Options', img:'binding.jpg', filter:'custom' }
+  { title:'Offset Printing', desc:'Letter Pad, Brooches, Vouchers, Bill Books & Envelopes', count:'7 Services', img:'offset-printing.jpg', filter:'offset' },
+  { title:'Screen Printing', desc:'Bag Printing & Specialty Traditional Invitations', count:'2 Services', img:'printed-bags.jpg', filter:'screen' },
+  { title:'Digital Printing', desc:'Visiting Cards, Gold Foil, ID Cards & Sticker Sheets', count:'9 Services', img:'foil-visiting-cards.jpg', filter:'digital' },
+  { title:'Sublimation Printing', desc:'Personalized Mugs, Keychains, T-Shirts, Flags & Pillows', count:'6 Services', img:'mug-printing.jpg', filter:'sublimation' },
+  { title:'Sticker Digital Cutting', desc:'Custom Die-Cutting on 13×19 Sticker Sheets', count:'Plotter 13×19', img:'sticker-cutting.jpg', filter:'digital' },
+  { title:'Photo Print (6 Colour)', desc:'Biometric Passport Photos & All Size Photo Frames', count:'6 Colour Studio', img:'photo-frames.jpg', filter:'photo' },
+  { title:'Banner & Signage', desc:'Flex Banners, Backlight, LED Boards, Standees & UV', count:'7 Services', img:'led-boards.jpg', filter:'signage' },
+  { title:'Binding Services', desc:'Spiral, Soft, Hardcover & University Project Binding', count:'4 Services', img:'hard-binding.jpg', filter:'binding' },
+  { title:'Designing Studio', desc:'Logos, Brochures, Banners & Print-Ready Artwork', count:'Creative Studio', img:'graphic-design.jpg', filter:'designing' }
 ];
 
 const typingKeywords = [
+  "Offset Printing",
   "Visiting cards",
+  "Gold & Silver Foil Cards",
+  "All Bill Books & Receipts",
+  "Screen Bag Printing",
   "Custom Mug Printing",
-  "T-Shirt Printing",
-  "Custom Stickers",
-  "Cap Printing",
-  "Pillow Cover Printing",
-  "Photo Tiles Printing",
-  "Brochures & Pamphlets",
-  "PVC ID Cards",
-  "Flex Banners",
-  "Thesis Book Binding",
-  "Letterheads & Envelopes"
+  "T-Shirt Sublimation & DTF",
+  "Sticker Digital Cutting 13x19",
+  "Passport Size Photos",
+  "Photo Frames All Sizes",
+  "LED Boards & Backlight",
+  "Roll-up Standing Boards",
+  "UV Printing on Acrylic & Wood",
+  "Thesis & Project Binding",
+  "ID Card Rope Printing",
+  "Graphic Designing"
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -140,7 +185,12 @@ document.addEventListener('DOMContentLoaded', () => {
     popCatGrid.querySelectorAll('.category-explore').forEach(btn => {
       btn.addEventListener('click', e => {
         const filter = btn.dataset.filter;
-        if (filter) renderProducts(filter);
+        if (filter) {
+          document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.toggle('active', b.dataset.filter === filter);
+          });
+          renderProducts(filter);
+        }
       });
     });
   }
@@ -152,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderProducts(filter = 'all') {
     let filtered = products;
-    if (filter === 'bestseller') filtered = products.filter(p => p.tag.includes('Bestseller') || p.tag.includes('Popular'));
+    if (filter === 'bestseller') filtered = products.filter(p => p.tag.includes('Bestseller') || p.tag.includes('Essential') || p.tag.includes('Luxury'));
     else if (filter !== 'all') filtered = products.filter(p => p.category === filter);
 
     // Update Products Grid
@@ -162,8 +212,8 @@ document.addEventListener('DOMContentLoaded', () => {
       productsGrid.innerHTML = filtered.map(p => `
         <div class="product-card visible" data-id="${p.id}">
           <div class="product-card-image">
-            <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" />
-            <span class="product-tag" ${p.tag.includes('Collection') ? 'style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;"' : ''}>${p.tag}</span>
+            <img src="${p.img}" alt="${p.title}" decoding="async" width="600" height="400" />
+            <span class="product-tag">${p.tag}</span>
             <div class="card-shine"></div>
           </div>
           <div class="product-card-body">
@@ -182,8 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardHTML = filtered.map(p => `
       <div class="featured-card">
         <div class="featured-card-img">
-          <img src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" width="600" height="400" />
-          <span class="featured-badge" ${p.tag.includes('Collection') ? 'style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;"' : ''}>${p.tag}</span>
+          <img src="${p.img}" alt="${p.title}" decoding="async" width="600" height="400" />
+          <span class="featured-badge">${p.tag}</span>
         </div>
         <div class="featured-card-content">
           <h4>${p.title}</h4>

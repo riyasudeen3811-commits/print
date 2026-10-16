@@ -12,55 +12,124 @@
 </head>
 <body>
 
-  <!-- Header & Navigation -->
-  <header class="main-header">
-    <div class="container header-container">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">🖨️</div>
-        <div class="logo-text">
-          <span class="brand-name">MADHA<span class="highlight">PRINTS</span></span>
-          <span class="brand-tagline">Quality Printing • Kottivakkam</span>
+    <!-- ═══ TOP LIVE TICKER STATUS BAR ═══ -->
+    <div class="top-ticker-bar">
+      <div class="container top-ticker-inner">
+        <div class="ticker-status-pill">
+          <span class="status-dot-pulse"></span>
+          <span>Kottivakkam Print Hub Active</span>
         </div>
-      </a>
+        <div class="ticker-items">
+          <span class="ticker-item">⚡ <strong>Same-Day Proofing</strong> Available</span>
+          <span class="ticker-item">🎨 <strong>Heidelberg 5-Color</strong> Offset Press</span>
+          <span class="ticker-item">📦 <strong>Express Doorstep Delivery</strong> Across Chennai</span>
+        </div>
+        <div class="ticker-contact-links">
+          <a href="tel:+919790779720">📞 +91 97907 79720</a>
+          <span style="opacity:0.3;">|</span>
+          <a href="https://wa.me/919790779720?text=Hi%20Madha%20Prints%2C%20I%20have%20an%20enquiry." target="_blank" style="color:#25D366;font-weight:600;">💬 WhatsApp Desk</a>
+        </div>
+      </div>
+    </div>
 
-      <!-- Search Bar -->
-      <div class="header-search">
-        <input type="text" id="searchInput" placeholder="Search Business Cards, Stickers, Banners..." autocomplete="off">
-        <button class="search-btn" id="searchBtn">🔍</button>
-        <div id="searchResults" class="search-dropdown hidden"></div>
+    <!-- ═══ MAIN HEADER ═══ -->
+    <header class="site-header" id="navbar">
+      <div class="container header-main">
+        <!-- Logo -->
+        <a href="index.html" class="site-logo">
+          <div class="logo-mark">MP</div>
+          <div class="logo-text-group">
+            <span class="brand-name">MADHA<span class="brand-accent"> PRINTS</span></span>
+            <span class="brand-sub">Neighbourhood Print Store</span>
+          </div>
+        </a>
+
+        <!-- Animated Typing Search Bar -->
+        <div class="header-search-container">
+          <form class="header-search-form" id="search-form" onsubmit="return false;">
+            <div class="search-input-wrapper">
+              <span class="search-icon-fixed">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </span>
+              <input type="text" class="header-search-input" id="search-input" placeholder=" " aria-label="Search products" autocomplete="off" />
+              <span class="search-placeholder-label">Search for <span class="search-typing-text" id="typing-text">Visiting cards</span></span>
+              <button type="submit" class="search-submit-btn" id="search-btn">
+                <span>Search</span>
+              </button>
+            </div>
+          </form>
+          <div class="search-results-dropdown" id="search-dropdown"></div>
+        </div>
+
+        <!-- Header Right Actions -->
+        <div class="header-actions">
+          <a href="https://wa.me/919790779720?text=Hi%20Madha%20Prints%2C%20I%20want%20to%20get%20an%20instant%20quote." class="btn btn-whatsapp header-wa-btn" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>Quote</span>
+          </a>
+
+          <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
       </div>
 
-      <nav class="nav-menu">
-        <a href="index.html" class="nav-link ">Home</a>
-        <a href="services.html" class="nav-link ">Services</a>
-        <a href="about.html" class="nav-link active">About Us</a>
-        <a href="contact.html" class="nav-link ">Contact Us</a>
+      <!-- Navigation Bar -->
+      <nav class="sub-nav">
+        <div class="container sub-nav-inner">
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link" style="color:var(--brand-gold,#fbbf24);font-weight:700;">★ All 9 Services</a></li>
+            <li class="nav-item"><a href="services.html#offset-printing" class="nav-link">Offset Printing</a></li>
+            <li class="nav-item"><a href="services.html#screen-printing" class="nav-link">Screen Printing</a></li>
+            <li class="nav-item"><a href="services.html#digital-printing" class="nav-link">Digital Printing</a></li>
+            <li class="nav-item"><a href="services.html#sublimation-printing" class="nav-link">Sublimation Gifts</a></li>
+            <li class="nav-item"><a href="services.html#sticker-cutting" class="nav-link">Sticker Cutting</a></li>
+            <li class="nav-item"><a href="services.html#photo-print" class="nav-link">Photo Print</a></li>
+            <li class="nav-item"><a href="services.html#banner-signage" class="nav-link">Banners & LED</a></li>
+            <li class="nav-item"><a href="services.html#binding" class="nav-link">Binding</a></li>
+            <li class="nav-item"><a href="services.html#designing" class="nav-link">Designing</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
       </nav>
+    </header>
 
-      <div class="header-actions">
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html" style="color:var(--brand-gold,#fbbf24);font-weight:700;">★ All 9 Services Catalog</a>
+      <a href="services.html#offset-printing">Offset Printing</a>
+      <a href="services.html#screen-printing">Screen Printing</a>
+      <a href="services.html#digital-printing">Digital Printing</a>
+      <a href="services.html#sublimation-printing">Sublimation Gifts</a>
+      <a href="services.html#sticker-cutting">Sticker Digital Cutting (13x19)</a>
+      <a href="services.html#photo-print">Photo Print (6 Colour)</a>
+      <a href="services.html#banner-signage">Banners & LED Boards</a>
+      <a href="services.html#binding">Binding Services</a>
+      <a href="services.html#designing">Designing</a>
+      <a href="about.html">About Our Store</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
 
-        <a href="contact.html" class="btn btn-primary btn-sparkle">Get Express Quote</a>
-              <div class="mobile-menu-btn" id="mobile-menu-btn">
-          <span></span><span></span><span></span>
+    <!-- ═══ HERO SECTION ═══ -->
+    <section class="hero-image-only" id="about-hero">
+      <div class="hero-image-container">
+        <img src="hero-about.jpg" alt="Madha Prints Printing Shop Store Kottivakkam Chennai" class="hero-full-banner-img" fetchpriority="high" decoding="async" style="min-height:380px;max-height:430px;object-fit:cover;" />
+        <div class="hero-wording-overlay">
+          <div class="hero-wording-card" style="max-width:880px;margin:0 auto;text-align:center;">
+            <span class="hero-wording-tag">🏢 ABOUT MADHA PRINTS • KOTTIVAKKAM, CHENNAI</span>
+            <h1 class="hero-wording-title">Crafting Premium Print Experiences</h1>
+            <p class="hero-wording-subtitle">From custom corporate visiting cards to heavy-duty commercial Heidelberg offset printing, we bring vibrant ideas to life with precision technology.</p>
+            <div class="hero-wording-btns" style="justify-content:center;">
+              <a href="services.html" class="btn btn-primary">📖 Explore All 9 Services</a>
+              <a href="https://wa.me/919790779720?text=Hi%20Madha%20Prints" target="_blank" class="btn btn-outline-light">💬 WhatsApp Desk</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero-section" style="min-height: 420px;">
-    <div class="hero-bg">
-      <img src="hero-about.jpg" alt="Madha Prints Printing Shop Store Kottivakkam Chennai" fetchpriority="high">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-container">
-      <div class="hero-content">
-        <span class="hero-badge">🏢 ABOUT MADHA PRINTS</span>
-        <h1 class="hero-title">Crafting Premium Print Experiences in Chennai</h1>
-        <p class="hero-subtitle">From custom corporate visiting cards to heavy-duty commercial Heidelberg offset printing, we bring vibrant ideas to life with precision technology.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <!-- About Details Section -->
   <section class="section">
