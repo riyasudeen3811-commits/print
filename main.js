@@ -402,15 +402,127 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btt) btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  /* ═══ 9. MOBILE MENU ═══ */
+  /* ═══ 9. MOBILE MENU DRAWER & BACKDROP OVERLAY ═══ */
   const mobileMenuBtns = document.querySelectorAll('.mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  if (mobileMenuBtns.length && mobileMenu) {
-    mobileMenuBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
+  const mobileOverlay = document.getElementById('mobile-menu-overlay');
+  const mobileClose = document.getElementById('mobile-menu-close');
+
+  function openMobileMenu() {
+    mobileMenu?.classList.add('active');
+    mobileOverlay?.classList.add('active');
+    mobileMenuBtns.forEach(b => b.classList.add('active'));
+    document.body.classList.add('menu-open');
+  }
+
+  function closeMobileMenu() {
+    mobileMenu?.classList.remove('active');
+    mobileOverlay?.classList.remove('active');
+    mobileMenuBtns.forEach(b => b.classList.remove('active'));
+    document.body.classList.remove('menu-open');
+  }
+
+  mobileMenuBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      if (mobileMenu?.classList.contains('active')) closeMobileMenu();
+      else openMobileMenu();
+    });
+  });
+
+  if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+  if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenu);
+  document.querySelectorAll('.mobile-menu a').forEach(l => l.addEventListener('click', closeMobileMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+
+  /* ═══ 10. MOBILE DRAWER QUICK SEARCH ═══ */
+  const drawerSearchInput = document.getElementById('mobile-drawer-search');
+  const drawerSearchResults = document.getElementById('mobile-search-results');
+  if (drawerSearchInput && drawerSearchResults) {
+    drawerSearchInput.addEventListener('input', e => {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) {
+        drawerSearchResults.innerHTML = '';
+        drawerSearchResults.classList.remove('active');
+        return;
+      }
+      const matches = products.filter(p => p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q));
+      if (matches.length > 0) {
+        drawerSearchResults.innerHTML = matches.slice(0, 6).map(p => `
+          <div class="mobile-search-item" data-title="${p.title}">
+            <img src="${p.img}" alt="${p.title}" />
+            <div class="mobile-search-meta">
+              <h6>${p.title}</h6>
+              <span>${p.tag}</span>
+            </div>
+            <a href="https://wa.me/919790779720?text=${encodeURIComponent('Hi Madha Prints, I want a quote for ' + p.title)}" target="_blank" class="mobile-search-wa-btn">💬 Quote</a>
+          </div>
+        `).join('');
+        drawerSearchResults.classList.add('active');
+      } else {
+        drawerSearchResults.innerHTML = '<div class="mobile-search-empty">No matching products found.</div>';
+        drawerSearchResults.classList.add('active');
+      }
+    });
+  }
+
+  /* ═══ 11. HERO HOTSPOTS TOUCH & TAP SUPPORT ═══ */
+  const hotspots = document.querySelectorAll('.hero-hotspot');
+  if (hotspots.length) {
+    hotspots.forEach(spot => {
+      spot.addEventListener('click', e => {
+        if (e.target.closest('.popover-cta')) return;
+        e.stopPropagation();
+        const isActive = spot.classList.contains('active');
+        hotspots.forEach(s => s.classList.remove('active'));
+        if (!isActive) spot.classList.add('active');
       });
     });
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('active')));
+    document.addEventListener('click', () => {
+      hotspots.forEach(s => s.classList.remove('active'));
+    });
+  }
+
+  /* ═══ 12. DOCK QUICK QUOTE TRIGGER ═══ */
+  const dockQuoteTrigger = document.getElementById('dock-quote-trigger');
+  if (dockQuoteTrigger) {
+    dockQuoteTrigger.addEventListener('click', e => {
+      e.preventDefault();
+      const modalReq = document.getElementById('modal-requirement');
+      if (modalReq) modalReq.value = 'General Instant Print Quotation Request';
+      document.getElementById('quote-modal')?.classList.add('active');
+    });
+  }
+
+  /* ═══ 13. COPY BUTTONS FEEDBACK ═══ */
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.dataset.copy;
+      if (navigator.clipboard && text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const original = btn.innerHTML;
+          btn.innerHTML = '✓ Copied!';
+          btn.classList.add('copied');
+          setTimeout(() => {
+            btn.innerHTML = original;
+            btn.classList.remove('copied');
+          }, 2000);
+        });
+      }
+    });
+  });
+
+  const btnCopyAddress = document.getElementById('btn-copy-contact-address');
+  if (btnCopyAddress) {
+    btnCopyAddress.addEventListener('click', () => {
+      const address = "No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai – 600 041. (Near SRP Tools)";
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(address).then(() => {
+          const orig = btnCopyAddress.innerText;
+          btnCopyAddress.innerText = '✓ Copied Address!';
+          setTimeout(() => btnCopyAddress.innerText = orig, 2000);
+        });
+      }
+    });
   }
 });

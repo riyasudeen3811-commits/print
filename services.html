@@ -25,7 +25,9 @@
           <span class="ticker-item">📦 <strong>Express Doorstep Delivery</strong> Across Chennai</span>
         </div>
         <div class="ticker-contact-links">
-          <a href="tel:+919790779720">📞 +91 97907 79720</a>
+          <a href="tel:+919710488192">📞 +91 97104 88192</a>
+          <span style="opacity:0.3;">|</span>
+          <a href="tel:+919790779720">+91 97907 79720</a>
           <span style="opacity:0.3;">|</span>
           <a href="https://wa.me/919790779720?text=Hi%20Madha%20Prints%2C%20I%20have%20an%20enquiry." target="_blank" style="color:#25D366;font-weight:600;">💬 WhatsApp Desk</a>
         </div>
@@ -96,36 +98,63 @@
       </nav>
     </header>
 
+    <!-- Mobile Menu Backdrop Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
     <!-- Mobile Menu Drawer -->
     <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="services.html" style="color:var(--brand-gold,#fbbf24);font-weight:700;">★ All 9 Services Catalog</a>
-      <a href="services.html#offset-printing">Offset Printing</a>
-      <a href="services.html#screen-printing">Screen Printing</a>
-      <a href="services.html#digital-printing">Digital Printing</a>
-      <a href="services.html#sublimation-printing">Sublimation Gifts</a>
-      <a href="services.html#sticker-cutting">Sticker Digital Cutting (13x19)</a>
-      <a href="services.html#photo-print">Photo Print (6 Colour)</a>
-      <a href="services.html#banner-signage">Banners & LED Boards</a>
-      <a href="services.html#binding">Binding Services</a>
-      <a href="services.html#designing">Designing</a>
-      <a href="about.html">About Our Store</a>
-      <a href="contact.html">Contact Us</a>
+      <div class="mobile-menu-header">
+        <a href="index.html" class="site-logo">
+          <div class="logo-mark">MP</div>
+          <div class="logo-text-group">
+            <span class="brand-name" style="color:#ffffff;">MADHA<span class="brand-accent"> PRINTS</span></span>
+            <span class="brand-sub" style="color:#94a3b8;">Kottivakkam, Chennai</span>
+          </div>
+        </a>
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close Navigation Menu">✕</button>
+      </div>
+
+      <div class="mobile-menu-search">
+        <input type="text" id="mobile-drawer-search" placeholder="🔍 Search visiting cards, mugs..." aria-label="Search print products" autocomplete="off" />
+        <div class="mobile-search-results" id="mobile-search-results"></div>
+      </div>
+
+      <div class="mobile-menu-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="services.html" class="active" style="color:var(--brand-gold,#fbbf24);font-weight:700;">★ All 9 Services Catalog</a>
+        <a href="services.html#offset-printing">🖨️ Offset Printing</a>
+        <a href="services.html#screen-printing">🎨 Screen Printing</a>
+        <a href="services.html#digital-printing">⚡ Digital Printing & Foil Cards</a>
+        <a href="services.html#sublimation-printing">🎁 Sublimation Gifts</a>
+        <a href="services.html#sticker-cutting">✂️ Sticker Digital Cutting (13x19)</a>
+        <a href="services.html#photo-print">📸 Photo Print (6 Colour)</a>
+        <a href="services.html#banner-signage">🪧 Banners & LED Boards</a>
+        <a href="services.html#binding">📚 Binding Services</a>
+        <a href="services.html#designing">✨ Designing Studio</a>
+        <a href="about.html">🏢 About Our Store</a>
+        <a href="contact.html">📞 Contact & Location</a>
+      </div>
+
+      <div class="mobile-menu-footer">
+        <a href="tel:+919790779720" class="btn btn-outline-light mobile-drawer-call">📞 Call Now</a>
+        <a href="https://wa.me/919790779720?text=Hi%20Madha%20Prints%2C%20I%20have%20an%20enquiry." target="_blank" class="btn btn-whatsapp mobile-drawer-wa">💬 WhatsApp</a>
+      </div>
     </div>
 
     <!-- ═══ HERO SECTION — SERVICES SHOWCASE ═══ -->
     <section class="hero-image-only" id="services-hero">
       <div class="hero-image-container">
         <img src="hero-services.jpg" alt="Madha Prints — All 9 Printing Services Showcase" class="hero-full-banner-img" fetchpriority="high" decoding="async" style="min-height:380px;max-height:430px;object-fit:cover;" />
-        <div class="hero-wording-overlay">
-          <div class="hero-wording-card" style="max-width:880px;margin:0 auto;text-align:center;">
-            <span class="hero-wording-tag">📦 COMPLETE COMMERCIAL CATALOG • 9 DEDICATED CATEGORIES</span>
-            <h1 class="hero-wording-title">All Printing &amp; Custom Branding Services</h1>
-            <p class="hero-wording-subtitle">Offset Press • Screen Printing • Digital &amp; Foil Cards • Sublimation Gifts • 13×19 Sticker Cutting • 6-Colour Studio Photo Print • 3D LED Signage • Binding • Designing</p>
-            <div class="hero-wording-btns" style="justify-content:center;">
-              <a href="https://wa.me/919790779720?text=Hi%20Madha%20Prints%2C%20I%20want%20to%20enquire%20about%20printing%20services." target="_blank" class="btn btn-primary">💬 Order via WhatsApp</a>
-              <a href="tel:+919790779720" class="btn btn-outline-light">📞 Call +91 97907 79720</a>
-            </div>
+      </div>
+
+      <div class="hero-wording-overlay">
+        <div class="hero-wording-card" style="max-width:880px;margin:0 auto;text-align:center;">
+          <span class="hero-wording-tag">📦 COMPLETE COMMERCIAL CATALOG • 9 DEDICATED CATEGORIES</span>
+          <h1 class="hero-wording-title">All Printing &amp; Custom Branding Services</h1>
+          <p class="hero-wording-subtitle">Offset Press • Screen Printing • Digital &amp; Foil Cards • Sublimation Gifts • 13×19 Sticker Cutting • 6-Colour Studio Photo Print • 3D LED Signage • Binding • Designing</p>
+          <div class="hero-wording-btns" style="justify-content:center;">
+            <a href="https://wa.me/919790779720?text=Hi%20Madha%20Prints%2C%20I%20want%20to%20enquire%20about%20printing%20services." target="_blank" class="btn btn-primary">💬 Order via WhatsApp</a>
+            <a href="tel:+919790779720" class="btn btn-outline-light">📞 Call +91 97907 79720</a>
           </div>
         </div>
       </div>
@@ -887,7 +916,7 @@
       <div class="footer-col">
         <h4>Store Info</h4>
         <p>📍 No: 4/353, 4th Street, Dr. Puratchi Thalaivi Main Road, MGR Nagar, Kottivakkam, Chennai – 600 041. (Near SRP Tools)</p>
-        <p>📞 <a href="tel:9710488259">971 048 8259</a> | <a href="tel:9790779720">97907 79720</a></p>
+        <p>📞 <a href="tel:9710488259">971 048 8259</a> | <a href="tel:9710488192">971 048 8192</a> | <a href="tel:9790779720">97907 79720</a></p>
         <p>✉️ <a href="mailto:madhaprints@gmail.com">madhaprints@gmail.com</a></p>
       </div>
     </div>
