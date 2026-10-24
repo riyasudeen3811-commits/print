@@ -18,6 +18,11 @@ const products = [
   // Category 3: Digital Printing
   { id:'digital-visiting-cards', title:'Visiting Cards', category:'digital', tag:'⭐ Bestseller', desc:'Premium business visiting cards on 350+ GSM art card, matte velvet lamination, and spot UV.', img:'business-cards.jpg' },
   { id:'digital-foil-cards', title:'Gold & Silver Foil Visiting Cards', category:'digital', tag:'✨ Luxury Foil', desc:'Metallic gold and silver foil stamped business cards with tactile embossed detailing.', img:'foil-visiting-cards.jpg' },
+
+  // Category: Stamps & Seals (Featured)
+  { id:'stamp-normal', title:'Normal Rubber Stamp', category:'stamps', tag:'🔖 Classic Seal', desc:'Custom wooden handle rubber stamps with sharp vulcanized text for official seals, signatures, and addresses.', img:'normal-stamp.jpg' },
+  { id:'stamp-self-ink', title:'Self Inking Stamp', category:'stamps', tag:'⭐ Automatic Ink', desc:'High-speed self-inking stamps with built-in ink pad, leakproof casing, and crisp impressions in blue, black, or red.', img:'self-ink-stamp.jpg' },
+
   { id:'digital-invitations', title:'Digital Invitations', category:'digital', tag:'⚡ Express', desc:'Express digital color invitation printing for urgent parties, weddings, and corporate meetups.', img:'invitations.jpg' },
   { id:'digital-letterpad', title:'Digital Letter Pad', category:'digital', tag:'⚡ Digital', desc:'Short-run on-demand digital letterhead and memo pad printing with sharp color consistency.', img:'letterheads.jpg' },
   { id:'digital-brooches', title:'Digital Brooches', category:'digital', tag:'📌 Badges', desc:'High-resolution full-color digitally printed brooches and pin badges with glossy protective finish.', img:'brooches-pins.jpg' },
@@ -56,22 +61,13 @@ const products = [
   { id:'binding-project', title:'Project Binding', category:'binding', tag:'📚 College Viva', desc:'Student project report and degree thesis binding strictly meeting university standards.', img:'project-binding.jpg' },
 
   // Category 9: Designing
-  { id:'designing-studio', title:'Designing', category:'designing', tag:'🎨 Creative Studio', desc:'Professional graphic designing for logos, business cards, banners, invitations, and packaging.', img:'graphic-design.jpg' }
+  { id:'designing-studio', title:'Designing', category:'designing', tag:'🎨 Creative Studio', desc:'Professional graphic designing for logos, business cards, banners, invitations, and packaging.', img:'graphic-design.jpg' },
 ];
 
-const popularCategories = [
-  { title:'Offset Printing', desc:'Letter Pad, Brooches, Vouchers, Bill Books & Envelopes', count:'7 Services', img:'offset-printing.jpg', filter:'offset' },
-  { title:'Screen Printing', desc:'Bag Printing & Specialty Traditional Invitations', count:'2 Services', img:'printed-bags.jpg', filter:'screen' },
-  { title:'Digital Printing', desc:'Visiting Cards, Gold Foil, ID Cards & Sticker Sheets', count:'9 Services', img:'foil-visiting-cards.jpg', filter:'digital' },
-  { title:'Sublimation Printing', desc:'Personalized Mugs, Keychains, T-Shirts, Flags & Pillows', count:'6 Services', img:'mug-printing.jpg', filter:'sublimation' },
-  { title:'Sticker Digital Cutting', desc:'Custom Die-Cutting on 13×19 Sticker Sheets', count:'Plotter 13×19', img:'sticker-cutting.jpg', filter:'digital' },
-  { title:'Photo Print (6 Colour)', desc:'Biometric Passport Photos & All Size Photo Frames', count:'6 Colour Studio', img:'photo-frames.jpg', filter:'photo' },
-  { title:'Banner & Signage', desc:'Flex Banners, Backlight, LED Boards, Standees & UV', count:'7 Services', img:'led-boards.jpg', filter:'signage' },
-  { title:'Binding Services', desc:'Spiral, Soft, Hardcover & University Project Binding', count:'4 Services', img:'hard-binding.jpg', filter:'binding' },
-  { title:'Designing Studio', desc:'Logos, Brochures, Banners & Print-Ready Artwork', count:'Creative Studio', img:'graphic-design.jpg', filter:'designing' }
-];
 
 const typingKeywords = [
+  "Normal Rubber Stamps",
+  "Self Inking Stamps",
   "Offset Printing",
   "Visiting cards",
   "Gold & Silver Foil Cards",
@@ -165,35 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ═══ 2. RENDER POPULAR CATEGORIES CAROUSEL ═══ */
-  const popCatGrid = document.getElementById('popular-categories-grid');
-  if (popCatGrid) {
-    popCatGrid.innerHTML = popularCategories.map(c => `
-      <div class="category-card">
-        <div class="category-card-img">
-          <img src="${c.img}" alt="${c.title}" loading="lazy" decoding="async" />
-          <span class="category-badge">${c.count}</span>
-        </div>
-        <div class="category-card-body">
-          <h3 class="category-title">${c.title}</h3>
-          <p class="category-desc">${c.desc}</p>
-          <a href="#cards" class="btn btn-outline-dark category-explore" data-filter="${c.filter}">View Options →</a>
-        </div>
-      </div>
-    `).join('');
-
-    popCatGrid.querySelectorAll('.category-explore').forEach(btn => {
-      btn.addEventListener('click', e => {
-        const filter = btn.dataset.filter;
-        if (filter) {
-          document.querySelectorAll('.filter-btn').forEach(b => {
-            b.classList.toggle('active', b.dataset.filter === filter);
-          });
-          renderProducts(filter);
-        }
-      });
-    });
-  }
 
   /* ═══ 3. RENDER PRODUCTS GRID & MARQUEE ═══ */
   const productsGrid = document.getElementById('products-grid');
@@ -202,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderProducts(filter = 'all') {
     let filtered = products;
-    if (filter === 'bestseller') filtered = products.filter(p => p.tag.includes('Bestseller') || p.tag.includes('Essential') || p.tag.includes('Luxury'));
+    if (filter === 'bestseller') filtered = products.filter(p => p.tag.includes('Bestseller') || p.tag.includes('Essential') || p.tag.includes('Luxury') || p.category === 'stamps');
     else if (filter !== 'all') filtered = products.filter(p => p.category === filter);
 
     // Update Products Grid
